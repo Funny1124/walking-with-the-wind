@@ -1,14 +1,28 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <nav-bar></nav-bar>
+
+    <!--    <nav>-->
+<!--      <nav-bar></nav-bar>-->
+<!--      <router-link to="/">Home</router-link>-->
+<!--      |-->
+<!--      <router-link to="/about">About</router-link>-->
+<!--    </nav>-->
     <router-view/>
+    <FooterBar></FooterBar>
   </div>
 </template>
-
-<style lang="less">
+<script>
+import NavBar from '@/components/NavBar'
+import FooterBar from '@/components/FooterBar'
+export default {
+  components: {
+    NavBar,
+    FooterBar
+  }
+}
+</script>
+<style lang="less" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,7 +39,7 @@ nav {
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #2963f1;
     }
   }
 }
