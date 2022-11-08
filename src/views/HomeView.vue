@@ -1,11 +1,16 @@
 <template>
   <div>
-    <el-carousel indicator-position="none" height="460px">
-      <el-carousel-item v-for="(item,index) in srcList" :key="index">
-        <img :src=item alt="加载失败">
-        <h2>{{ index }}</h2>
-      </el-carousel-item>
-    </el-carousel>
+    <div class="block">
+      <el-carousel trigger="click" height="450px">
+        <el-carousel-item v-for="(item, index) in new_list" :key="index">
+          <div class="pic_item">
+            <img class="small" :src="item.image" alt=""/>
+            <h3>{{ item.description }}</h3>
+          </div>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
+
     <div id="advertising">
       <img :src=advertising alt="广告招租" style="width: 30%; max-width: 300px">
     </div>
@@ -74,6 +79,11 @@ export default {
   text-align: center;
 }
 
+h2 {
+  font-size: 18px;
+  color: crimson;
+}
+
 .Content {
   width: 80%;
   margin: 0 auto;
@@ -102,6 +112,56 @@ export default {
 .button {
   padding: 0;
   float: right;
+}
+
+.pic_item {
+  position: relative;
+  height: 100%;
+}
+
+.el-carousel__item h3 {
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+
+.block {
+  width: 100%;
+}
+
+.small {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.pic_item {
+  position: relative;
+  height: 100%;
+}
+
+.pic_item:hover {
+  cursor: pointer;
+}
+
+.pic_item img {
+  width: 100%;
+  height: 100%;
+}
+
+.pic_item h3 {
+  position: absolute;
+  left: 1rem;
+  bottom: 2rem;
 }
 
 </style>
