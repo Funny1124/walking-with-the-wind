@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="block">
+    <slider-bar style="z-index: 3"></slider-bar>
+
+    <div class="block" style="z-index: 1">
       <el-carousel trigger="click" height="450px">
         <el-carousel-item v-for="(item, index) in new_list" :key="index">
           <div class="pic_item">
@@ -10,7 +12,6 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-
     <div id="advertising">
       <img :src=advertising alt="广告招租" style="width: 30%; max-width: 300px">
     </div>
@@ -32,6 +33,7 @@
   </div>
 </template>
 <script>
+import SliderBar from '@/components/SliderBar'
 export default {
   data () {
     return {
@@ -69,6 +71,9 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    SliderBar
   }
 }
 </script>
