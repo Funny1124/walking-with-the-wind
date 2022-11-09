@@ -3,7 +3,7 @@
     <!--    <img src="../assets/logo.png" class="logo" alt="logo">-->
     <nav>
       <ul class="nav_links">
-        <li>
+        <li style="font-size: 24px">
           <router-link to="/">Q穷游</router-link>
         </li>
         <li>
@@ -82,19 +82,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.band {
-  font-size: 24px;
-
-  :hover {
-    font-size: 30px;
-  }
-}
-
-img {
-  height: 50px;
-  width: 50px;
-}
-
 li, a, button {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -110,25 +97,23 @@ header {
   padding: 0 5%;
   width: 100%;
   line-height: normal;
-  background-color: rgb(0, 0, 0);
-}
-
-nav {
-  line-height: 38px;
+  background-color: rgba(0, 0, 0, 0.73);
 }
 
 .logo {
   cursor: pointer;
   margin-right: auto;
 }
-
+nav {
+  margin-top: 8px;
+}
 .nav_links {
   list-style: none;
 }
 
 .nav_links li {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .nav_links li a {
@@ -136,12 +121,13 @@ nav {
 }
 
 .nav_links li a:hover {
-  color: #0088a9;
+  color: rgb(15, 176, 127);
+  font-size: 24px;
 }
 
 button {
-  padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
+  padding: 5px 25px;
+  background-color: #1580ff;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -149,6 +135,6 @@ button {
 }
 
 button:hover {
-  background-color: rgba(0, 136, 169, 0.7);
+  background-color: rgb(15, 176, 127);
 }
 </style>
