@@ -3,7 +3,7 @@
     <slider-bar style="z-index: 3"></slider-bar>
 
     <div class="block" style="z-index: 1">
-      <el-carousel trigger="click" height="450px">
+      <el-carousel trigger="click" height="640px">
         <el-carousel-item v-for="(item, index) in new_list" :key="index">
           <div class="pic_item">
             <img class="small" :src="item.image" alt=""/>

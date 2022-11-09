@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
+    <nav-bar style="z-index: 3"></nav-bar>
 
     <!--    <nav>-->
 <!--      <nav-bar></nav-bar>-->
@@ -9,8 +9,8 @@
 <!--      <router-link to="/about">About</router-link>-->
 <!--    </nav>-->
 <!--    <router-view/>-->
-    <router-view></router-view>
-    <FooterBar></FooterBar>
+    <router-view style="z-index: 1"></router-view>
+    <FooterBar style="z-index: 2"></FooterBar>
   </div>
 </template>
 <script>
