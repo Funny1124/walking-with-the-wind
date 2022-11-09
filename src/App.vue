@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar style="z-index: 3"></nav-bar>
-
+<!--    <nav-bar style="z-index: 3"></nav-bar>-->
     <!--    <nav>-->
 <!--      <nav-bar></nav-bar>-->
 <!--      <router-link to="/">Home</router-link>-->
@@ -14,11 +13,11 @@
   </div>
 </template>
 <script>
-import NavBar from '@/components/NavBar'
+// import NavBar from '@/components/NavBar'
 import FooterBar from '@/components/FooterBar'
 export default {
   components: {
-    NavBar,
+    // NavBar,
     FooterBar
   }
 }

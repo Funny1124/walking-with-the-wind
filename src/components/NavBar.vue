@@ -63,11 +63,14 @@
         <li>
           <router-link to="/cheap-hotels">特价酒店</router-link>
         </li>
+        <li>
+          <router-link to="/travel-data">旅游大数据</router-link>
+        </li>
       </ul>
     </nav>
-    <a href="">
-      <button>Contact</button>
-    </a>
+    <router-link to="/login">
+      <button>login</button>
+    </router-link>
   </header>
 
 </template>
@@ -81,6 +84,7 @@ export default {
 <style lang="less" scoped>
 .band {
   font-size: 24px;
+
   :hover {
     font-size: 30px;
   }
@@ -105,9 +109,8 @@ header {
   align-items: center;
   padding: 0 5%;
   width: 100%;
-  position: absolute;
   line-height: normal;
-  background-color: rgba(44, 62, 80, 0);
+  background-color: rgb(0, 0, 0);
 }
 
 nav {

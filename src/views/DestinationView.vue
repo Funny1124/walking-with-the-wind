@@ -1,5 +1,6 @@
 <template>
   <div>
+    <nav-bar></nav-bar>
     <div class="customized">
       <ul>
         <li v-for="(item,index) in cityList" :key="index">
@@ -43,12 +44,11 @@ export default {
 
 <style lang="less" scoped>
 .customized {
-  text-align: center;
+  text-align: left;
   background-color: aquamarine;
 }
 
 li {
-  margin: 8px;
   padding: 8px;
   img {
     height: 100px;
