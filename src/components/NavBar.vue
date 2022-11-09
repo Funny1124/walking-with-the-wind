@@ -68,6 +68,9 @@
           <b-nav-item>
             <router-link to="/cheap-hotels">特价酒店</router-link>
           </b-nav-item>
+          <b-nav-item>
+            <router-link to="/travel-data">旅游大数据</router-link>
+          </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
         <b-navbar-nav class="ml-auto" style="margin-right: 5%">
