@@ -29,21 +29,51 @@
 
     <!--    今日推荐-->
     <div class="recommend">
+      <h2>今日推荐</h2>
       <el-row gutter="20">
-        <el-col :span="8" v-for="(item, index) in new_list" :key="index">
-          <el-card class="info-card">
-            <img :src="item.image" alt="加载失败" class="image">
-            <p style="text-indent:2em">{{ item.description }}</p>
-            <div class="bottom clearfix">
-              <el-button type="text" class="button">查看详情</el-button>
-            </div>
-          </el-card>
+        <el-col :span="6" v-for="(item, index) in new_list" :key="index">
+          <b-card
+            :title=item.city
+            :img-src=item.image
+            img-alt="Image"
+            img-top
+            tag="article"
+            style="max-width: 20rem;"
+            class="mb-2"
+          >
+            <b-card-text>
+              {{ item.description }}
+            </b-card-text>
+            <b-button href="#" variant="primary" style="float: right">查看详情</b-button>
+          </b-card>
         </el-col>
       </el-row>
     </div>
+
     <!--  穷游商城-->
     <div class="shop">
-
+      <h2>穷游商城</h2>
+      <el-row>
+        <!--        style="max-width: 540px;"-->
+        <el-col :span="12" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
+          <b-card no-body class="overflow-hidden">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img :src=item.image :alt=item.city class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body title="Horizontal Card">
+                  <b-card-text>
+                    {{
+                      item.description
+                    }}
+                  </b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+        </el-col>
+      </el-row>
     </div>
     <!--    热门游记-话题-->
     <div class="hot-topic">
@@ -67,28 +97,44 @@ export default {
         ],
       new_list: [
         {
+          city: '桂林',
           image: require('../assets/img/city.jpg'),
-          description: '学党史向未来从中华民族伟大复兴视角解读党的十九届六中全会学党史'
+          description: '桂林，简称“桂”，广西壮族自治区辖地级市、省域副中心城市'
         },
         {
+          city: '南宁',
           image: require('../assets/img/river.jpg'),
-          description: '学党史向未来从中华民族伟大复兴视角解读党的十九届六中全会学党史'
+          description: '南宁，简称“邕”，别称绿城、邕城，是广西壮族自治区辖地级市、首府'
         },
         {
+          city: '深圳',
           image: require('../assets/img/river.jpg'),
-          description: '学党史向未来从中华民族伟大复兴视角解读党的十九届六中全会学党史'
+          description: '深圳，简称“深”，别称鹏城，广东省辖地级市，是广东省副省级市'
         },
         {
+          city: '广州',
           image: require('../assets/img/city.jpg'),
-          description: '学党史向未来从中华民族伟大复兴视角解读党的十九届六中全会学党史'
+          description: '广州，简称“穗”，别称羊城、花城，是广东省辖地级市、广东省省会'
         },
         {
+          city: '东莞',
           image: require('../assets/img/river.jpg'),
-          description: '学党史向未来从中华民族伟大复兴视角解读党的十九届六中全会学党史'
+          description: '东莞，广东省辖地级市，国务院确定的珠江三角洲东岸中心城市。'
         },
         {
+          city: '梧州',
           image: require('../assets/img/city.jpg'),
-          description: '学党史向未来从中华民族伟大复兴视角解读党的十九届六中全会学党史'
+          description: '梧州，广西壮族自治区辖地级市。位于广西东部，地处西江黄金水道'
+        },
+        {
+          city: '杭州',
+          image: require('../assets/img/river.jpg'),
+          description: '杭州，简称“杭”，古称临安、钱塘，浙江省辖地级市、省会、副省级市'
+        },
+        {
+          city: '大理',
+          image: require('../assets/img/city.jpg'),
+          description: '云贵高原上的洱海平原，苍山之麓，洱海之滨，南诏国的都城'
         }
       ]
     }
@@ -108,8 +154,8 @@ export default {
 }
 
 h2 {
-  font-size: 18px;
-  color: crimson;
+  font-size: 36px;
+  text-align: center;
 }
 
 .recommend {
@@ -118,11 +164,12 @@ h2 {
 }
 
 .shop {
-
+  width: 80%;
+  margin: 20px auto;
 }
 
 .info-card {
-  margin: 20px;
+  margin: 10px 0;
   height: 450px;
   background-color: rgba(249, 250, 252, 0.45);
   border: medium #e7a722;
