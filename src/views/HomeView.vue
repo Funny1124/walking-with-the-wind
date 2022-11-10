@@ -19,7 +19,7 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-
+    <search-bar style="z-index: 5"></search-bar>
     <!--    广告-->
     <div id="advertising">
       <img :src=advertising alt="广告招租" style="width: 30%; max-width: 300px">
@@ -53,6 +53,7 @@
 </template>
 <script>
 import SliderBar from '@/components/SliderBar'
+import SearchBar from '@/components/SearchBar'
 
 export default {
   data () {
@@ -93,7 +94,8 @@ export default {
     }
   },
   components: {
-    SliderBar
+    SliderBar,
+    SearchBar
   }
 }
 </script>
