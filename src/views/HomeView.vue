@@ -242,9 +242,14 @@ h2 {
 }
 
 .pic_item h3 {
+  border-radius: 8px;
+  font-size: 20px;
+  color: black;
+  background-color: #99a9bf;
+  padding: 8px 10px;
   position: absolute;
-  left: 1rem;
-  bottom: 2rem;
+  right: 5%;
+  bottom: 5%;
 }
 
 </style>
