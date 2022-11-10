@@ -55,18 +55,22 @@
       <h2>穷游商城</h2>
       <el-row>
         <!--        style="max-width: 540px;"-->
-        <el-col :span="12" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
+        <el-col :span="8" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
           <b-card no-body class="overflow-hidden">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img :src=item.image :alt=item.city class="rounded-0"></b-card-img>
+                <b-card-img :src=item.image :alt=item.city class="rounded-0"
+                            style="object-fit: cover; height: 200px;width: 200px"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body title="Horizontal Card">
+                <b-card-body :title=item.city>
                   <b-card-text>
                     {{
                       item.description
                     }}
+                  </b-card-text>
+                  <b-card-text style="float: right;color: crimson">
+                    ￥100
                   </b-card-text>
                 </b-card-body>
               </b-col>
