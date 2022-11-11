@@ -8,6 +8,10 @@
 <!--      <router-link to="/about">About</router-link>-->
 <!--    </nav>-->
 <!--    <router-view/>-->
+<!--    <el-backtop target=".page_scroll" style="z-index: 8"></el-backtop>-->
+    <el-backtop>
+      <i class="el-icon-arrow-up"></i>
+    </el-backtop>
     <router-view style="z-index: 1"></router-view>
 <!--    <FooterBar style="z-index: 2"></FooterBar>-->
   </div>

@@ -233,7 +233,7 @@ h2 {
   top: 30%;
   left: 0.5%;
   /*height: 500px;*/
-  height: 40%;
+  height: 30%;
   width: 3%;
   min-height: 250px;
   min-width: 60px;
@@ -248,7 +248,7 @@ h2 {
 }
 
 .box:hover {
-  width: 195px;
+  width: 150px;
   opacity: 1;
 }
 
@@ -293,18 +293,19 @@ h2 {
 }
 
 .contact {
-  opacity: 0.5;
+  opacity: 0.3;
   position: fixed;
-  right: 2%;
-  bottom: 5%;
-  width: 4%;
+  left: 0.5%;
+  bottom: 3%;
+  width: 3%;
   height: auto;
   padding: 4px;
   border-radius: 8px;
+  display: inline-block;
 }
 
 .contact:hover {
-  width: 5%;
+  width: 4%;
   opacity: 1;
 }
 </style>
