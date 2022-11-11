@@ -7,18 +7,7 @@
              :style="{'background-image':'url('+item.image+')'}">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
             <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ item.city }}</h2>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img :src=item.image alt="image" width="32" height="32"
-                     class="rounded-circle border border-white">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"/>
-                </svg>
-                <small>{{ item.description }}</small>
-              </li>
-            </ul>
+            <p style="text-indent: 2em">{{ item.description }}</p>
           </div>
         </div>
       </div>

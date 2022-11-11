@@ -4,10 +4,10 @@
     <el-row>
       <!--        style="max-width: 540px;"-->
       <el-col :span="12" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
-        <b-card no-body class="overflow-hidden" >
+        <b-card no-body class="overflow-hidden rounded-3">
           <b-row no-gutters >
             <b-col>
-              <b-card-img :src=item.image :alt=item.city class="rounded-0"
+              <b-card-img :src=item.image :alt=item.city class="rounded-3"
                           style="object-fit: cover; height: 380px;width: 100%"></b-card-img>
             </b-col>
             <b-card-body :title=item.city>
