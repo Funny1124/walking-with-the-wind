@@ -39,6 +39,9 @@
     <div id="hot-topic" class="hot-topic">
       <hot-topic-tem :info_list="new_list"></hot-topic-tem>
     </div>
+    <div>
+      <footer-bar></footer-bar>
+    </div>
   </div>
 </template>
 <script>

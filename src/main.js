@@ -12,6 +12,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'element-ui/lib/theme-chalk/index.css'
 
 import NavBar from '@/components/NavBar'
+import FooterBar from '@/components/FooterBar'
 
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
@@ -23,6 +24,7 @@ Vue.use(ElementUI)
 Vue.config.productionTip = false
 
 Vue.component('nav-bar', NavBar)
+Vue.component('footer-bar', FooterBar)
 new Vue({
   router,
   store,

@@ -1,10 +1,8 @@
 <template>
-  <div class="container">
-    <footer class="row row-cols-5 py-5 my-5 border-top">
-      <div class="col">
-<!--        <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">-->
-<!--          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>-->
-<!--        </a>-->
+  <div class="footer_bar">
+    <footer class="row row-cols-5 py-5 border-top footer_bar">
+      <div class="col" style="text-align: center">
+        <img :src="require('@/assets/logo.png')" alt="logo" width="50px" height="50px">
         <p class="text-muted">&copy; 2021</p>
       </div>
       <div class="col">
@@ -53,6 +51,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+.footer_bar {
+  background-color: #323232;
+  padding: 0 15%;
 
+  h5 {
+    color: #b7c0c0;
+  }
+
+  li {
+    color: #c0c0c0;
+  }
+}
 </style>

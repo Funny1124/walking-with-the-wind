@@ -9,16 +9,16 @@
 <!--    </nav>-->
 <!--    <router-view/>-->
     <router-view style="z-index: 1"></router-view>
-    <FooterBar style="z-index: 2"></FooterBar>
+<!--    <FooterBar style="z-index: 2"></FooterBar>-->
   </div>
 </template>
 <script>
 // import NavBar from '@/components/NavBar'
-import FooterBar from '@/components/FooterBar'
+// import FooterBar from '@/components/FooterBar'
 export default {
   components: {
     // NavBar,
-    FooterBar
+    // FooterBar
   }
 }
 </script>
