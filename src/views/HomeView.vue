@@ -38,7 +38,7 @@
             img-alt="Image"
             img-top
             tag="article"
-            style="max-width: 20rem;"
+            style=""
             class="mb-2"
           >
             <b-card-text>
@@ -57,12 +57,12 @@
         <!--        style="max-width: 540px;"-->
         <el-col :span="8" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
           <b-card no-body class="overflow-hidden">
-            <b-row no-gutters>
-              <b-col md="6">
+            <el-row style="height: 300px">
+              <el-col :span="16">
                 <b-card-img :src=item.image :alt=item.city class="rounded-0"
-                            style="object-fit: cover; height: 200px;width: 200px"></b-card-img>
-              </b-col>
-              <b-col md="6">
+                            style="object-fit: cover; height: 300px;width: 100%"></b-card-img>
+              </el-col>
+              <el-col :span="6">
                 <b-card-body :title=item.city>
                   <b-card-text>
                     {{
@@ -73,15 +73,35 @@
                     ￥100
                   </b-card-text>
                 </b-card-body>
-              </b-col>
-            </b-row>
+              </el-col>
+            </el-row>
           </b-card>
         </el-col>
       </el-row>
     </div>
     <!--    热门游记-话题-->
     <div class="hot-topic">
-
+      <h2>热门游记-话题</h2>
+      <el-row>
+        <!--        style="max-width: 540px;"-->
+        <el-col :span="12" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
+          <b-card no-body class="overflow-hidden" >
+            <b-row no-gutters >
+              <b-col>
+                <b-card-img :src=item.image :alt=item.city class="rounded-0"
+                            style="object-fit: cover; height: 380px;width: 100%"></b-card-img>
+              </b-col>
+              <b-card-body :title=item.city>
+                <b-card-text>
+                  {{
+                    item.description
+                  }}
+                </b-card-text>
+              </b-card-body>
+            </b-row>
+          </b-card>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
@@ -108,7 +128,7 @@ export default {
         {
           city: '南宁',
           image: require('../assets/img/river.jpg'),
-          description: '南宁，简称“邕”，别称绿城、邕城，是广西壮族自治区辖地级市、首府'
+          description: '南宁，简称“邕”，别称绿城、邕城，是广西壮族自治区辖地级市'
         },
         {
           city: '深圳',
@@ -118,7 +138,7 @@ export default {
         {
           city: '广州',
           image: require('../assets/img/city.jpg'),
-          description: '广州，简称“穗”，别称羊城、花城，是广东省辖地级市、广东省省会'
+          description: '广州，简称“穗”，别称羊城、花城，是广东省辖地级市'
         },
         {
           city: '东莞',
@@ -168,6 +188,11 @@ h2 {
 }
 
 .shop {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.hot-topic {
   width: 80%;
   margin: 20px auto;
 }
