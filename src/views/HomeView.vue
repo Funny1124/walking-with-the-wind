@@ -6,8 +6,12 @@
       background-color: rgba(44, 62, 80, 0)">
     </nav-bar>
     <!--    侧边栏-->
-    <slider-bar style="z-index: 3"></slider-bar>
-
+    <div class="box" style="z-index: 2">
+      <a href="#recommend"><img src="../assets/img/recommend.svg" alt=""><span>今日推荐</span></a>
+      <a href="#hot-landscape"><img src="../assets/img/hot.svg" alt=""><span>热门景点</span></a>
+      <a href="#shop"><img src="../assets/img/shop.svg" alt=""><span>穷游商城</span></a>
+      <a href="#hot-topic"><img src="../assets/img/goodday.svg" alt=""><span>热门话题</span></a>
+    </div>
     <!--    轮播图-->
     <div id="carousel" class="carousel" style="z-index: 1">
       <carousel-tem :info_list="new_list"></carousel-tem>
@@ -16,17 +20,16 @@
     <search-bar style="z-index: 5"></search-bar>
 
     <!--    广告-->
-    <div id="advertising">
-      <img :src=advertising alt="广告招租" style="width: 30%; max-width: 300px">
-      <img :src=advertising alt="广告招租" style="width: 30%; max-width: 300px">
-      <img :src=advertising alt="广告招租" style="width: 30%; max-width: 300px">
-    </div>
+    <advertising-tem/>
 
     <!--    今日推荐-->
     <div id="recommend" class="recommend">
-        <recommend-tem :info_list="new_list"></recommend-tem>
+      <recommend-tem :info_list="new_list"></recommend-tem>
     </div>
-
+    <!--    热门景区-->
+    <div id="hot-landscape" class="recommend">
+      <hot-landscape-tem :info_list="new_list"></hot-landscape-tem>
+    </div>
     <!--  穷游商城-->
     <div id="shop" class="shop">
       <ShopTem :info_list="new_list"></ShopTem>
@@ -39,18 +42,18 @@
   </div>
 </template>
 <script>
-import SliderBar from '@/components/SliderBar'
 import SearchBar from '@/components/SearchBar'
 import CarouselTem from '@/components/CarouselTem'
 import RecommendTem from '@/components/RecommendTem'
 import ShopTem from '@/components/ShopTem'
 import HotTopicTem from '@/components/HotTopicTem'
+import AdvertisingTem from '@/components/AdvertisingTem'
+import HotLandscapeTem from '@/components/HotLandscapeTem'
 
 export default {
   data () {
     return {
       currentDate: new Date(),
-      advertising: require('@/assets/img/advertising.png'),
       srcList:
         [
           require('@/assets/img/river.jpg'),
@@ -101,40 +104,39 @@ export default {
     }
   },
   components: {
-    SliderBar,
     SearchBar,
     CarouselTem,
     RecommendTem,
     ShopTem,
-    HotTopicTem
+    HotTopicTem,
+    AdvertisingTem,
+    HotLandscapeTem
   }
 }
 </script>
 <style lang="less" scoped>
-#advertising {
-  /*height: 100px;*/
-  background-color: #f5f5f5;
-  padding: 0.5%;
-  text-align: center;
-}
-
 h2 {
   font-size: 36px;
   text-align: center;
 }
 
 .recommend {
-  width: 80%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.hot-landscape {
+  width: 70%;
   margin: 0 auto;
 }
 
 .shop {
-  width: 80%;
+  width: 70%;
   margin: 20px auto;
 }
 
 .hot-topic {
-  width: 80%;
+  width: 70%;
   margin: 20px auto;
 }
 
@@ -218,4 +220,71 @@ h2 {
   bottom: 5%;
 }
 
+.box {
+  position: fixed;
+  top: 30%;
+  left: 0.5%;
+  /*height: 500px;*/
+  height: 40%;
+  width: 3%;
+  min-height: 250px;
+  min-width: 60px;
+  background-color: rgba(255, 255, 255, 0.57);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.box:hover {
+  width: 195px;
+}
+
+.box a {
+  /* overflow: hidden; */
+  line-height: 50px;
+  height: 50px;
+  width: 88%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.box {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*.box a:nth-of-type(1)::before, .box a:nth-of-type(5)::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  bottom: -8px;*/
+/*  width: 100%;*/
+/*  border-bottom: 1px solid rgb(165, 173, 201);*/
+/*}*/
+
+.box a img {
+
+  vertical-align: middle;
+  margin-left: 15px;
+  height: 30px;
+  width: 30px;
+}
+
+.box span {
+  position: absolute;
+  white-space: nowrap;
+  transition: 0.3s;
+  opacity: 0;
+  margin-left: 8px;
+  top: 2px;
+}
+
+.box a:hover {
+  color: #ffffff;
+  background-color: rgb(15, 176, 127);
+}
+
+.box:hover span {
+  opacity: 1;
+}
 </style>

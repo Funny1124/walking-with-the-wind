@@ -10,7 +10,7 @@
               <b-card-img :src=item.image :alt=item.city class="rounded-0"
                           style="object-fit: cover; height: 300px;width: 100%"></b-card-img>
             </el-col>
-            <el-col :span="6">
+            <el-col :span="8">
               <b-card-body :title=item.city>
                 <b-card-text>
                   {{

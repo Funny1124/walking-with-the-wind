@@ -8,7 +8,24 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    children: [
+      {
+        path: 'recommend',
+        name: 'recommend',
+        component: () => import(/* webpackChunkName: "about" */ '../components/RecommendTem')
+      },
+      {
+        path: 'shop',
+        name: 'shop',
+        component: () => import(/* webpackChunkName: "about" */ '../components/ShopTem')
+      },
+      {
+        path: 'hot-topic',
+        name: 'hot-topic',
+        component: () => import(/* webpackChunkName: "about" */ '../components/HotTopicTem')
+      }
+    ]
   },
   {
     path: '/login',
