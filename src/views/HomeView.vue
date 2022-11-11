@@ -172,61 +172,6 @@ h2 {
   float: right;
 }
 
-.pic_item {
-  position: relative;
-  height: 100%;
-}
-
-.el-carousel__item h3 {
-  color: white;
-  font-size: 0.8rem;
-  opacity: 0.75;
-  margin: 0;
-}
-
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
-}
-
-.carousel {
-  width: 100%;
-}
-
-.small {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.pic_item {
-  position: relative;
-  height: 100%;
-}
-
-.pic_item:hover {
-  cursor: pointer;
-}
-
-.pic_item img {
-  width: 100%;
-  height: 100%;
-}
-
-.pic_item h3 {
-  border-radius: 8px;
-  font-size: 20px;
-  color: black;
-  background-color: #99a9bf;
-  padding: 8px 10px;
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-}
-
 .box {
   opacity: 0.3;
   position: fixed;
