@@ -1,7 +1,5 @@
 <template>
   <div>
-    <router-link to="/contact"><img class="contact" src="@/assets/email.png" alt="联系我们" title="联系我们">
-    </router-link>
     <nav-bar
       style="z-index: 5;
       position: absolute;
@@ -14,6 +12,10 @@
       <a href="#shop"><img src="../assets/img/shop.svg" alt=""><span>穷游商城</span></a>
       <a href="#hot-topic"><img src="../assets/img/goodday.svg" alt=""><span>热门话题</span></a>
     </div>
+    <!--    联系我们-->
+    <router-link to="/contact">
+      <img class="contact" src="@/assets/email.png" alt="联系我们">
+    </router-link>
     <!--    轮播图-->
     <div id="carousel" class="carousel" style="z-index: 1">
       <carousel-tem :info_list="new_list"></carousel-tem>
@@ -226,6 +228,7 @@ h2 {
 }
 
 .box {
+  opacity: 0.3;
   position: fixed;
   top: 30%;
   left: 0.5%;
@@ -234,29 +237,27 @@ h2 {
   width: 3%;
   min-height: 250px;
   min-width: 60px;
+  padding: 0 15px;
   background-color: rgba(255, 255, 255, 0.57);
   border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   transition: 0.3s;
 }
 
 .box:hover {
   width: 195px;
+  opacity: 1;
 }
 
 .box a {
   /* overflow: hidden; */
   line-height: 50px;
   height: 50px;
-  width: 88%;
   border-radius: 5px;
   position: relative;
-}
-
-.box {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 /*.box a:nth-of-type(1)::before, .box a:nth-of-type(5)::before {*/
@@ -268,9 +269,7 @@ h2 {
 /*}*/
 
 .box a img {
-
   vertical-align: middle;
-  margin-left: 15px;
   height: 30px;
   width: 30px;
 }
@@ -294,12 +293,18 @@ h2 {
 }
 
 .contact {
+  opacity: 0.5;
   position: fixed;
-  left: 95%;
-  margin-top: 40%;
+  right: 2%;
+  bottom: 5%;
   width: 4%;
   height: auto;
   padding: 4px;
   border-radius: 8px;
+}
+
+.contact:hover {
+  width: 5%;
+  opacity: 1;
 }
 </style>
