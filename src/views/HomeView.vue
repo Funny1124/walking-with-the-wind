@@ -1,5 +1,7 @@
 <template>
   <div>
+    <router-link to="/contact"><img class="contact" src="@/assets/email.png" alt="联系我们" title="联系我们">
+    </router-link>
     <nav-bar
       style="z-index: 5;
       position: absolute;
@@ -289,5 +291,15 @@ h2 {
 
 .box:hover span {
   opacity: 1;
+}
+
+.contact {
+  position: fixed;
+  left: 95%;
+  margin-top: 40%;
+  width: 4%;
+  height: auto;
+  padding: 4px;
+  border-radius: 8px;
 }
 </style>
