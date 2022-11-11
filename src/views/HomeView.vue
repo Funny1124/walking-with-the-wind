@@ -3,23 +3,18 @@
     <nav-bar
       style="z-index: 5;
       position: absolute;
-      background-color: rgba(44, 62, 80, 0)
-"></nav-bar>
+      background-color: rgba(44, 62, 80, 0)">
+    </nav-bar>
     <!--    侧边栏-->
     <slider-bar style="z-index: 3"></slider-bar>
 
     <!--    轮播图-->
-    <div class="carousel" style="z-index: 1">
-      <el-carousel trigger="click" height="640px">
-        <el-carousel-item v-for="(item, index) in new_list" :key="index">
-          <div class="pic_item">
-            <img class="small" :src="item.image" alt=""/>
-            <h3>{{ item.description }}</h3>
-          </div>
-        </el-carousel-item>
-      </el-carousel>
+    <div id="carousel" class="carousel" style="z-index: 1">
+      <carousel-tem :info_list="new_list"></carousel-tem>
     </div>
+
     <search-bar style="z-index: 5"></search-bar>
+
     <!--    广告-->
     <div id="advertising">
       <img :src=advertising alt="广告招租" style="width: 30%; max-width: 300px">
@@ -28,86 +23,28 @@
     </div>
 
     <!--    今日推荐-->
-    <div class="recommend">
-      <h2>今日推荐</h2>
-      <el-row gutter="20">
-        <el-col :span="6" v-for="(item, index) in new_list" :key="index">
-          <b-card
-            :title=item.city
-            :img-src=item.image
-            img-alt="Image"
-            img-top
-            tag="article"
-            style=""
-            class="mb-2"
-          >
-            <b-card-text>
-              {{ item.description }}
-            </b-card-text>
-            <b-button href="#" variant="primary" style="float: right">查看详情</b-button>
-          </b-card>
-        </el-col>
-      </el-row>
+    <div id="recommend" class="recommend">
+        <recommend-tem :info_list="new_list"></recommend-tem>
     </div>
 
     <!--  穷游商城-->
-    <div class="shop">
-      <h2>穷游商城</h2>
-      <el-row>
-        <!--        style="max-width: 540px;"-->
-        <el-col :span="8" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
-          <b-card no-body class="overflow-hidden">
-            <el-row style="height: 300px">
-              <el-col :span="16">
-                <b-card-img :src=item.image :alt=item.city class="rounded-0"
-                            style="object-fit: cover; height: 300px;width: 100%"></b-card-img>
-              </el-col>
-              <el-col :span="6">
-                <b-card-body :title=item.city>
-                  <b-card-text>
-                    {{
-                      item.description
-                    }}
-                  </b-card-text>
-                  <b-card-text style="float: right;color: crimson">
-                    ￥100
-                  </b-card-text>
-                </b-card-body>
-              </el-col>
-            </el-row>
-          </b-card>
-        </el-col>
-      </el-row>
+    <div id="shop" class="shop">
+      <ShopTem :info_list="new_list"></ShopTem>
     </div>
+
     <!--    热门游记-话题-->
-    <div class="hot-topic">
-      <h2>热门游记-话题</h2>
-      <el-row>
-        <!--        style="max-width: 540px;"-->
-        <el-col :span="12" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
-          <b-card no-body class="overflow-hidden" >
-            <b-row no-gutters >
-              <b-col>
-                <b-card-img :src=item.image :alt=item.city class="rounded-0"
-                            style="object-fit: cover; height: 380px;width: 100%"></b-card-img>
-              </b-col>
-              <b-card-body :title=item.city>
-                <b-card-text>
-                  {{
-                    item.description
-                  }}
-                </b-card-text>
-              </b-card-body>
-            </b-row>
-          </b-card>
-        </el-col>
-      </el-row>
+    <div id="hot-topic" class="hot-topic">
+      <hot-topic-tem :info_list="new_list"></hot-topic-tem>
     </div>
   </div>
 </template>
 <script>
 import SliderBar from '@/components/SliderBar'
 import SearchBar from '@/components/SearchBar'
+import CarouselTem from '@/components/CarouselTem'
+import RecommendTem from '@/components/RecommendTem'
+import ShopTem from '@/components/ShopTem'
+import HotTopicTem from '@/components/HotTopicTem'
 
 export default {
   data () {
@@ -165,7 +102,11 @@ export default {
   },
   components: {
     SliderBar,
-    SearchBar
+    SearchBar,
+    CarouselTem,
+    RecommendTem,
+    ShopTem,
+    HotTopicTem
   }
 }
 </script>

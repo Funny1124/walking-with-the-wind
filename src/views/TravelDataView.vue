@@ -77,7 +77,7 @@ export default {
           datasetIndex: 1
         }
       }
-      var myChart = this.$echarts.init(document.getElementById('one')) // 图标初始化
+      const myChart = this.$echarts.init(document.getElementById('one')) // 图标初始化
       myChart.setOption(option)
       window.onresize = function () {
         myChart.resize()

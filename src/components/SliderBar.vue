@@ -1,9 +1,9 @@
 <template>
   <div class="box">
-    <a href="#"><img src="../assets/img/recommend.svg" alt=""><span>今日推荐</span></a>
-    <a href="#"><img src="../assets/img/hot.svg" alt=""><span>热门景点</span></a>
-    <a href="#"><img src="../assets/img/shop.svg" alt=""><span>穷游商城</span></a>
-    <a href="#"><img src="../assets/img/goodday.svg" alt=""><span>热门话题</span></a>
+    <router-link to="/home/recommend"><img src="../assets/img/recommend.svg" alt=""><span>今日推荐</span></router-link>
+    <router-link to="/"><img src="../assets/img/hot.svg" alt=""><span>热门景点</span></router-link>
+    <router-link to="/home/shop"><img src="../assets/img/shop.svg" alt=""><span>穷游商城</span></router-link>
+    <router-link to="/home/hot-topic"><img src="../assets/img/goodday.svg" alt=""><span>热门话题</span></router-link>
   </div>
 </template>
 
