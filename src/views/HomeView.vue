@@ -31,7 +31,7 @@
       <recommend-tem :info_list="new_list"></recommend-tem>
     </div>
     <!--    热门景区-->
-    <div id="hot-landscape" class="recommend">
+    <div id="hot-landscape" class="hot-landscape">
       <hot-landscape-tem :info_list="new_list"></hot-landscape-tem>
     </div>
     <!--  穷游商城-->
@@ -96,16 +96,6 @@ export default {
           city: '梧州',
           image: require('../assets/img/city.jpg'),
           description: '梧州，广西壮族自治区辖地级市。位于广西东部，地处西江黄金水道'
-        },
-        {
-          city: '杭州',
-          image: require('../assets/img/river.jpg'),
-          description: '杭州，简称“杭”，古称临安、钱塘，浙江省辖地级市、省会、副省级市'
-        },
-        {
-          city: '大理',
-          image: require('../assets/img/city.jpg'),
-          description: '云贵高原上的洱海平原，苍山之麓，洱海之滨，南诏国的都城'
         }
       ]
     }
@@ -128,18 +118,20 @@ h2 {
 }
 
 .recommend {
-  width: 70%;
+  //width: 70%;
+  padding: 0 15%;
   margin: 0 auto;
 }
-
 .hot-landscape {
   width: 70%;
   margin: 0 auto;
 }
 
 .shop {
-  width: 70%;
+  //width: 70%;
+  padding: 2% 15%;
   margin: 20px auto;
+  background: linear-gradient(#6dd27c,#1ccdae);
 }
 
 .hot-topic {
