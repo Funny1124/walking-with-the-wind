@@ -8,7 +8,6 @@
     <!--    侧边栏-->
     <div class="box" style="z-index: 2">
       <a href="#recommend"><img src="../assets/img/recommend.svg" alt=""><span>今日推荐</span></a>
-      <a href="#hot-landscape"><img src="../assets/img/hot.svg" alt=""><span>热门景点</span></a>
       <a href="#shop"><img src="../assets/img/shop.svg" alt=""><span>穷游商城</span></a>
       <a href="#hot-topic"><img src="../assets/img/goodday.svg" alt=""><span>热门话题</span></a>
     </div>
@@ -35,12 +34,6 @@
     <div id="shop" class="shop">
       <ShopTem></ShopTem>
     </div>
-
-    <!--    热门景区-->
-    <div id="hot-landscape" class="hot-landscape">
-      <hot-landscape-tem :info_list="new_list"></hot-landscape-tem>
-    </div>
-
     <!--    热门游记-话题-->
     <div id="hot-topic" class="hot-topic">
       <hot-topic-tem :info_list="new_list"></hot-topic-tem>
@@ -57,7 +50,6 @@ import RecommendTem from '@/components/RecommendTem'
 import ShopTem from '@/components/ShopTem'
 import HotTopicTem from '@/components/HotTopicTem'
 import AdvertisingTem from '@/components/AdvertisingTem'
-import HotLandscapeTem from '@/components/HotLandscapeTem'
 
 export default {
   data () {
@@ -108,8 +100,7 @@ export default {
     RecommendTem,
     ShopTem,
     HotTopicTem,
-    AdvertisingTem,
-    HotLandscapeTem
+    AdvertisingTem
   }
 }
 </script>
