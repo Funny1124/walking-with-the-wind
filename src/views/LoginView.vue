@@ -54,7 +54,7 @@ export default {
         localStorage.setItem('token', 'Bearer xxxx')
         this.$store.commit('adminLogin')
         // 2. 跳转到后台主页
-        this.$router.push('/travel-data')
+        this.$router.push('admin')
         this.loginSuccess('管理员')
       } else {
         this.$router.push('/')

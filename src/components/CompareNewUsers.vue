@@ -4,7 +4,7 @@
       <div slot="header" class="clearfix">
         <span>用户数对比</span>
       </div>
-      <div id="two"></div>
+      <div id="CompareNewUsers"></div>
     </el-card>
   </div>
 </template>
@@ -88,11 +88,8 @@ export default {
         ]
       }
 
-      const compareNewUsers = this.$echarts.init(document.getElementById('two')) // 图标初始化
+      const compareNewUsers = this.$echarts.init(document.getElementById('CompareNewUsers')) // 图标初始化
       compareNewUsers.setOption(option)
-      window.onresize = function () {
-        compareNewUsers.resize()
-      }
     }
 
   }
@@ -100,7 +97,7 @@ export default {
 </script>
 
 <style scoped>
-#two {
+#CompareNewUsers {
   height: 500px;
 }
 </style>

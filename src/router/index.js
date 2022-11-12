@@ -58,6 +58,28 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/ContactView')
+  },
+  {
+    path: '/admin',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AdminView'),
+    redirect: '/admin/RecommendManagement',
+    children: [
+      {
+        path: 'RecommendManagement',
+        component: () => import(/* webpackChunkName: "about" */ '../components/RecommendManagement')
+      },
+      {
+        path: 'ShopManagement',
+        component: () => import(/* webpackChunkName: "about" */ '../components/ShopManagement')
+      },
+      {
+        path: 'HotTopicManagement',
+        component: () => import(/* webpackChunkName: "about" */ '../components/HotTopicManagement')
+      }
+
+      // 用户详情页的路由规则
+      // { path: 'userinfo/:id', component: UserDetail, props: true }
+    ]
   }
 ]
 

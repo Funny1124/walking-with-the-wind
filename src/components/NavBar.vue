@@ -76,6 +76,9 @@
         <el-avatar :src="$store.state.login_info.avatar" size="medium"></el-avatar>
       </div>
     </router-link>
+    <router-link to="/admin" v-if="$store.state.login_info.type==='admin'">
+      <button>后台管理</button>
+    </router-link>
   </header>
 
 </template>

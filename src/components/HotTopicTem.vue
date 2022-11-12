@@ -32,10 +32,8 @@
 <script>
 export default {
   name: 'HotTopicTem',
-  props: ['info_list'],
   data () {
     return {
-      new_list: this.info_list
     }
   }
 }
