@@ -3,10 +3,10 @@
     <nav-bar></nav-bar>
     <div class="customized">
       <ul>
-        <li v-for="(item,index) in cityList" :key="index">
+        <li v-for="(item,index) in $store.state.new_list" :key="index">
           <img :src=item.image alt="">
           {{ item.city }}------
-          {{ item.desc }}
+          {{ item.description }}
         </li>
       </ul>
     </div>
@@ -17,27 +17,6 @@
 
 export default {
   name: 'DestinationView',
-  data () {
-    return {
-      cityList: [
-        {
-          city: '桂林',
-          image: require('@/assets/img/river.jpg'),
-          desc: '欢迎来到GUET'
-        },
-        {
-          city: '318线',
-          image: require('@/assets/img/city.jpg'),
-          desc: '此生必驾驶318'
-        },
-        {
-          city: '内蒙古',
-          image: require('@/assets/img/river.jpg'),
-          desc: '内蒙古大草原'
-        }
-      ]
-    }
-  },
   components: {}
 }
 </script>

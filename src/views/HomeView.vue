@@ -30,13 +30,15 @@
     <div id="recommend" class="recommend">
       <recommend-tem :info_list="new_list"></recommend-tem>
     </div>
+
+    <!--  穷游商城-->
+    <div id="shop" class="shop">
+      <ShopTem></ShopTem>
+    </div>
+
     <!--    热门景区-->
     <div id="hot-landscape" class="hot-landscape">
       <hot-landscape-tem :info_list="new_list"></hot-landscape-tem>
-    </div>
-    <!--  穷游商城-->
-    <div id="shop" class="shop">
-      <ShopTem :info_list="new_list"></ShopTem>
     </div>
 
     <!--    热门游记-话题-->
@@ -122,6 +124,7 @@ h2 {
   padding: 0 15%;
   margin: 0 auto;
 }
+
 .hot-landscape {
   width: 70%;
   margin: 0 auto;
@@ -129,9 +132,9 @@ h2 {
 
 .shop {
   //width: 70%;
-  padding: 2% 15%;
+  padding: 2% 15% 1%;
   margin: 20px auto;
-  background: linear-gradient(#6dd27c,#1ccdae);
+  background: linear-gradient(#6dd27c, #1ccdae);
 }
 
 .hot-topic {

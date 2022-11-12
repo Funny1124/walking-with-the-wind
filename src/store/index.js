@@ -5,13 +5,98 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    recommend_list: [
+      {
+        city: '桂林',
+        image: require('@/assets/img/river.jpg'),
+        desc: '欢迎来到GUET'
+      },
+      {
+        city: '318线',
+        image: require('@/assets/img/city.jpg'),
+        desc: '此生必驾驶318'
+      }
+    ],
+    shop_item: [
+      {
+        type: '定制游',
+        region: '云南',
+        image: require('../assets/img/city.jpg'),
+        description: '全国往返云南丽江大理5日自由行（邂逅丽江古城+登顶玉龙雪山+洱海骑行+可调整天数/航班/高铁+全国出发）',
+        price: '￥1998'
+      },
+      {
+        type: '定制游',
+        region: '山西',
+        image: require('../assets/img/city.jpg'),
+        description: '全国往返山西5天4晚自由行（五台山+菩萨顶+广化寺+殊像寺+五爷庙+悬空寺+应县木塔+云冈石窟+太原+乔家大院+平遥古城+明清一条街）',
+        price: '￥2198'
+      },
+      {
+        type: '定制游',
+        region: '新疆',
+        image: require('../assets/img/city.jpg'),
+        description: '全国往返新疆8日自由行（东方瑞士喀纳斯+网红打卡五彩滩+安集海大峡谷+可调整天数/航班+全国出发）',
+        price: '￥2398'
+      },
+      {
+        type: '定制游',
+        region: '桂林',
+        image: require('../assets/img/city.jpg'),
+        description: '全国往返龙脊游江线4日自由行（龙脊梯田+黄洛瑶寨+漓江风光+兴坪古镇+十里画廊+遇龙河漂流+阳朔西街+银子岩+象鼻山）',
+        price: '￥2498'
+      },
+      {
+        type: '定制游',
+        region: '河北',
+        image: require('../assets/img/city.jpg'),
+        description: '全国往返凤凰张家界5天4晚半自由行（芙蓉镇+凤凰古城+湘西苗寨+天门山+玻璃栈道+黄龙洞+杨家界+袁家界+魅力湘西+金鞭溪+土司城）',
+        price: '￥2598'
+      },
+      {
+        type: '定制游',
+        region: '桂林',
+        image: require('../assets/img/city.jpg'),
+        description: '全国往返桂林4日自由行（龙脊梯田+漓江皮划艇+热气球体验+阳朔骑行+可调整天数/航班/高铁+全国出发）',
+        price: '￥2480'
+      }
+    ],
+    new_list: [
+      {
+        city: '桂林',
+        image: require('../assets/img/city.jpg'),
+        description: '桂林，简称“桂”，广西壮族自治区辖地级市、省域副中心城市'
+      },
+      {
+        city: '南宁',
+        image: require('../assets/img/river.jpg'),
+        description: '南宁，简称“邕”，别称绿城、邕城，是广西壮族自治区辖地级市'
+      },
+      {
+        city: '深圳',
+        image: require('../assets/img/river.jpg'),
+        description: '深圳，简称“深”，别称鹏城，广东省辖地级市，是广东省副省级市'
+      },
+      {
+        city: '广州',
+        image: require('../assets/img/city.jpg'),
+        description: '广州，简称“穗”，别称羊城、花城，是广东省辖地级市'
+      },
+      {
+        city: '东莞',
+        image: require('../assets/img/river.jpg'),
+        description: '东莞，广东省辖地级市，国务院确定的珠江三角洲东岸中心城市。'
+      },
+      {
+        city: '梧州',
+        image: require('../assets/img/city.jpg'),
+        description: '梧州，广西壮族自治区辖地级市。位于广西东部，地处西江黄金水道'
+      }
+    ]
+
   },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+  getters: {},
+  mutations: {},
+  actions: {},
+  modules: {}
 })

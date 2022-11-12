@@ -28,7 +28,7 @@ export default {
   methods: {
     linkClass (idx) {
       if (this.tabIndex === idx) {
-        return ['bg-dark', 'text-light']
+        return ['bg-success', 'text-light']
       } else {
         return ['bg-light', 'text-info']
       }
