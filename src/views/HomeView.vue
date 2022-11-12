@@ -28,7 +28,7 @@
 
     <!--    今日推荐-->
     <div id="recommend" class="recommend">
-      <recommend-tem :info_list="new_list"></recommend-tem>
+      <recommend-tem></recommend-tem>
     </div>
 
     <!--  穷游商城-->

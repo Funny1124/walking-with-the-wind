@@ -5,16 +5,42 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    recommend_list: [
+    recommend_item: [
       {
-        city: '桂林',
-        image: require('@/assets/img/river.jpg'),
-        desc: '欢迎来到GUET'
+        type: '游记',
+        region: '希腊',
+        image: require('../assets/img/xila.png'),
+        description: '远古的风，蓝色的梦 ---希腊山海20天'
       },
       {
-        city: '318线',
-        image: require('@/assets/img/city.jpg'),
-        desc: '此生必驾驶318'
+        type: '游记',
+        region: '新疆',
+        image: require('../assets/img/xjcm.png'),
+        description: '策马入新疆 三万里秋色自驾行(额济纳 大海道 喀纳斯 独库 喀什 帕米尔 塔克拉玛干 楼兰 俄博梁）'
+      },
+      {
+        type: '游记',
+        region: '福建',
+        image: require('../assets/img/fjtl.png'),
+        description: '人生海海，有福相见：福建土楼东山岛5天4夜自驾之旅（已完结）'
+      },
+      {
+        type: '游记',
+        region: '大理',
+        image: require('../assets/img/dleh.png'),
+        description: '洱海到泸沽湖，大理往卡瓦格博，一段圆梦，一段朝圣——云南自驾之行'
+      },
+      {
+        type: '游记',
+        region: '长沙 ',
+        image: require('../assets/img/hncs.png'),
+        description: '相信我，没有人能拒绝长沙小吃！'
+      },
+      {
+        type: '游记',
+        region: '东北',
+        image: require('../assets/img/dbcb.png'),
+        description: '去长白山就顺路去延吉假装出国吧'
       }
     ],
     shop_item: [
