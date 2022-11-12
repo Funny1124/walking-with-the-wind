@@ -36,7 +36,7 @@
     </div>
     <!--    热门游记-话题-->
     <div id="hot-topic" class="hot-topic">
-      <hot-topic-tem :info_list="new_list"></hot-topic-tem>
+      <hot-topic-tem></hot-topic-tem>
     </div>
     <div>
       <footer-bar></footer-bar>

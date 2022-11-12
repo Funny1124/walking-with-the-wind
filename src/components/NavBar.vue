@@ -63,9 +63,6 @@
         <li>
           <router-link to="/cheap-hotels">特价酒店</router-link>
         </li>
-        <li>
-          <router-link to="/travel-data">旅游大数据</router-link>
-        </li>
       </ul>
     </nav>
     <router-link to="/login">

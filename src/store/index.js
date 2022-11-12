@@ -87,7 +87,7 @@ export default new Vuex.Store({
         price: '￥2480'
       }
     ],
-    new_list: [
+    dest_item: [
       {
         city: '桂林',
         image: require('../assets/img/city.jpg'),
