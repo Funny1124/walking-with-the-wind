@@ -30,7 +30,9 @@
           </el-dropdown>
         </li>
         <li>
-          <router-link to="/assistant">行程助手</router-link>
+          <!--          <router-link to="/assistant">行程助手</router-link>-->
+          <!--          用于测试-->
+          <router-link to="/travel-data">行程助手</router-link>
         </li>
         <li>
           <el-dropdown>
@@ -65,8 +67,14 @@
         </li>
       </ul>
     </nav>
-    <router-link to="/login">
+    <router-link to="/login" v-if="$store.state.login_info.login===false">
       <button>login</button>
+    </router-link>
+    <router-link to="/login" v-if="$store.state.login_info.login===true">
+      <!--      <button>login</button>-->
+      <div class="block">
+        <el-avatar :src="$store.state.login_info.avatar" size="medium"></el-avatar>
+      </div>
     </router-link>
   </header>
 
@@ -100,10 +108,12 @@ header {
 .el-dropdown-menu__item {
   color: rgba(0, 0, 0, 0.8);
 }
+
 .el-dropdown-menu__item:hover {
   background-color: #198754;
   color: white;
 }
+
 .logo {
   cursor: pointer;
   margin-right: auto;

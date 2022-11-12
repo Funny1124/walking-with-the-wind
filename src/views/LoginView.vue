@@ -8,11 +8,12 @@
       <div class="col-md-10 mx-auto col-lg-5">
         <form class="p-4 p-md-5 border rounded-3 bg-light">
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                   v-model="username">
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" v-model="password">
             <label for="floatingPassword">Password</label>
           </div>
           <div class="checkbox mb-3">
@@ -20,7 +21,7 @@
               <input type="checkbox" value="remember-me"> Remember me
             </label>
           </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+          <button class="w-100 btn btn-lg btn-primary" @click="login">登录</button>
           <hr class="my-4">
           <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
         </form>
@@ -31,7 +32,38 @@
 
 <script>
 export default {
-  name: 'LoginView'
+  name: 'LoginView',
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    loginSuccess (p) {
+      this.$notify({
+        title: '成功',
+        message: '您已成功登录成功，尊敬的' + p + '!',
+        type: 'success'
+      })
+    },
+    login () {
+      if (this.username === 'admin' && this.password === '666666') {
+        // 登录成功
+        // 1. 存储 token
+        localStorage.setItem('token', 'Bearer xxxx')
+        this.$store.commit('adminLogin')
+        // 2. 跳转到后台主页
+        this.$router.push('/travel-data')
+        this.loginSuccess('管理员')
+      } else {
+        this.$router.push('/')
+        this.$store.commit('userLogin')
+        this.loginSuccess('用户')
+        localStorage.removeItem('token')
+      }
+    }
+  }
 }
 </script>
 

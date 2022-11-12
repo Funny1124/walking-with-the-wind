@@ -5,6 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    login_info: {
+      login: false,
+      type: '',
+      avatar: require('@/assets/img/avatar.png')
+    },
     recommend_item: [
       {
         type: '游记',
@@ -122,7 +127,18 @@ export default new Vuex.Store({
 
   },
   getters: {},
-  mutations: {},
+  mutations: {
+    adminLogin (state) {
+      // 增加一个带参数的mutations方法
+      state.login_info.login = true
+      state.login_info.type = 'admin'
+    },
+    userLogin (state) {
+      // 增加一个带参数的mutations方法
+      state.login_info.login = true
+      state.login_info.type = 'user'
+    }
+  },
   actions: {},
   modules: {}
 })
