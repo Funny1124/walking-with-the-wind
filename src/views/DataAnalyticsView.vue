@@ -14,7 +14,7 @@
 import CompareNewUsers from '@/components/CompareNewUsers'
 
 export default {
-  name: 'TravelDataView',
+  name: 'DataAnalytics',
   data () {
     return {}
   },

@@ -11,9 +11,9 @@
       <li class="menu-item">
         <router-link to="/admin/HotTopicManagement">热门话题</router-link>
       </li>
-<!--      <li class="menu-item">-->
-<!--        <router-link to="/admin/">数据分析</router-link>-->
-<!--      </li>-->
+      <li class="menu-item">
+        <router-link to="/admin/DataAnalytics">数据分析</router-link>
+      </li>
 <!--      <li class="menu-item">-->
 <!--        <router-link to="/admin">系统设置</router-link>-->
 <!--      </li>-->

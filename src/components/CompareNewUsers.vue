@@ -27,7 +27,7 @@ export default {
     initChart () {
       const option = {
         title: {
-          text: 'Stacked Line'
+          text: '用户'
         },
         tooltip: {
           trigger: 'axis'

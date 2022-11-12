@@ -44,14 +44,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/DestinationView')
   },
   {
-    path: '/travel-data',
-    name: 'travel-data',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/TravelDataView')
-  },
-  {
     path: '/contact',
     name: 'contact',
     // route level code-splitting
@@ -75,6 +67,10 @@ const routes = [
       {
         path: 'HotTopicManagement',
         component: () => import(/* webpackChunkName: "about" */ '../components/HotTopicManagement')
+      },
+      {
+        path: 'DataAnalytics',
+        component: () => import(/* webpackChunkName: "about" */ '../views/DataAnalyticsView')
       }
 
       // 用户详情页的路由规则

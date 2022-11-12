@@ -30,9 +30,7 @@
           </el-dropdown>
         </li>
         <li>
-          <!--          <router-link to="/assistant">行程助手</router-link>-->
-          <!--          用于测试-->
-          <router-link to="/travel-data">行程助手</router-link>
+          <router-link to="/assistant">行程助手</router-link>
         </li>
         <li>
           <el-dropdown>
