@@ -100,13 +100,22 @@ header {
   background-color: rgba(0, 0, 0, 0.73);
 }
 
+.el-dropdown-menu__item {
+  color: rgba(0, 0, 0, 0.8);
+}
+.el-dropdown-menu__item:hover {
+  background-color: #198754;
+  color: white;
+}
 .logo {
   cursor: pointer;
   margin-right: auto;
 }
+
 nav {
   margin-top: 8px;
 }
+
 .nav_links {
   list-style: none;
 }

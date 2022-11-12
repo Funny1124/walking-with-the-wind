@@ -3,7 +3,7 @@
     <nav-bar
       style="z-index: 5;
       position: absolute;
-      background-color: rgba(44, 62, 80, 0)">
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,0))">
     </nav-bar>
     <!--    侧边栏-->
     <div class="box" style="z-index: 2">
@@ -124,7 +124,6 @@ h2 {
   padding: 0 15%;
   margin: 0 auto;
 }
-
 .hot-landscape {
   width: 70%;
   margin: 0 auto;
@@ -134,7 +133,7 @@ h2 {
   //width: 70%;
   padding: 2% 15% 1%;
   margin: 20px auto;
-  background: linear-gradient(#6dd27c, #1ccdae);
+  background: linear-gradient(#6dd27c,#1ccdae);
 }
 
 .hot-topic {
