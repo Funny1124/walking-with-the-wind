@@ -1,17 +1,14 @@
 <template>
   <div>
     <el-card class="box-card">
-      <div slot="header" class="clearfix">
-        <span>用户数对比</span>
-      </div>
-      <div id="CompareNewUsers"></div>
+      <div id="DataTotalUsers"></div>
     </el-card>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CompareNewUsers',
+  name: 'DataTotalUsers',
   data () {
     return {}
   },
@@ -27,13 +24,13 @@ export default {
     initChart () {
       const option = {
         title: {
-          text: '用户'
+          text: '总用户数量/万'
         },
         tooltip: {
           trigger: 'axis'
         },
         legend: {
-          data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+          data: ['2019', '2020', '2021', '2022']
         },
         grid: {
           left: '3%',
@@ -49,46 +46,36 @@ export default {
         xAxis: {
           type: 'category',
           boundaryGap: false,
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          data: ['第一季度', '第二季度', '第三季度', '第四季度']
         },
         yAxis: {
           type: 'value'
         },
         series: [
           {
-            name: 'Email',
+            name: '2019',
             type: 'line',
-            stack: 'Total',
-            data: [120, 132, 101, 134, 90, 230, 210]
+            data: [150, 156, 162, 163]
           },
           {
-            name: 'Union Ads',
+            name: '2020',
             type: 'line',
-            stack: 'Total',
-            data: [220, 182, 191, 234, 290, 330, 310]
+            data: [133, 135, 140, 138]
           },
           {
-            name: 'Video Ads',
+            name: '2021',
             type: 'line',
-            stack: 'Total',
-            data: [150, 232, 201, 154, 190, 330, 410]
+            data: [140, 141, 140, 142]
           },
           {
-            name: 'Direct',
+            name: '2022',
             type: 'line',
-            stack: 'Total',
-            data: [320, 332, 301, 334, 390, 330, 320]
-          },
-          {
-            name: 'Search Engine',
-            type: 'line',
-            stack: 'Total',
-            data: [820, 932, 901, 934, 1290, 1330, 1320]
+            data: [150, 180, 191, 198]
           }
         ]
       }
 
-      const compareNewUsers = this.$echarts.init(document.getElementById('CompareNewUsers')) // 图标初始化
+      const compareNewUsers = this.$echarts.init(document.getElementById('DataTotalUsers')) // 图标初始化
       compareNewUsers.setOption(option)
     }
 
@@ -97,7 +84,7 @@ export default {
 </script>
 
 <style scoped>
-#CompareNewUsers {
+#DataTotalUsers {
   height: 500px;
 }
 </style>
