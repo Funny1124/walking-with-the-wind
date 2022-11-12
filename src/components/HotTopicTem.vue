@@ -1,26 +1,31 @@
 <template>
   <div>
-    <h2>热门游记-话题</h2>
-    <el-row>
-      <!--        style="max-width: 540px;"-->
-      <el-col :span="12" v-for="(item, index) in new_list" :key="index" style="padding: 10px">
-        <b-card no-body class="overflow-hidden" >
-          <b-row no-gutters >
-            <b-col>
-              <b-card-img :src=item.image :alt=item.city class="rounded-0"
-                          style="object-fit: cover; height: 380px;width: 100%"></b-card-img>
-            </b-col>
-            <b-card-body :title=item.city>
-              <b-card-text>
-                {{
-                  item.description
-                }}
-              </b-card-text>
-            </b-card-body>
-          </b-row>
-        </b-card>
-      </el-col>
-    </el-row>
+    <main>
+      <section class="py-5 text-center container">
+        <h2>热门游记-话题</h2>
+      </section>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" v-for="(item, index) in $store.state.recommend_item" :key="index">
+              <div class="card shadow-sm" style="height: 380px">
+                <img :src="item.image" height="260px" :alt="item.image" style="border-radius: 8px">
+                <div class="card-body">
+                  <p class="card-text" style="text-indent: 2em">【{{item.type}}】{{item.description}}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">查看</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
   </div>
 </template>
 
