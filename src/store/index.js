@@ -143,13 +143,12 @@ export default new Vuex.Store({
       state.shop_item.splice(index, 1)
     },
     edit_shop_item (state, [index, item]) {
-      //   // 增加一个带参数的mutations方法
-      state.shop_item[index] = item
-      //   // state.shop_item[index].type=item.type
-      //   // state.shop_item[index].region=item.region
-      //   // state.shop_item[index].image=item.image
-      //   // state.shop_item[index].description=item.description
-      //   // state.shop_item[index].price=item.price
+      // state.shop_item[index] = item //直接赋值，数据更新但是视图不更新
+      Vue.set(state.shop_item[index], 'type', item.type)
+      Vue.set(state.shop_item[index], 'region', item.region)
+      Vue.set(state.shop_item[index], 'image', item.image)
+      Vue.set(state.shop_item[index], 'description', item.description)
+      Vue.set(state.shop_item[index], 'price', item.price)
     },
     add_shop_item (state, item) {
       // 增加一个带参数的mutations方法
