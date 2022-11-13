@@ -19,7 +19,7 @@ export default {
     init () {
       setTimeout(() => {
         this.initChart()
-      }, 500)
+      }, 200)
     },
     initChart () {
       const compareNewUsers = document.getElementById('DataSexProportion')// 图标初始化

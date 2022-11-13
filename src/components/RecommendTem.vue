@@ -3,9 +3,9 @@
     <div>
       <el-row>
         <el-col span="10">
-          <router-link to="/login">
+          <a href="https://home.qyer.com/index.php?action=safety">
             <button><i class="el-icon-warning-outline"></i> 出境旅游安全提示<i class="el-icon-arrow-right"></i></button>
-          </router-link>
+          </a>
         </el-col>
         <el-col span="12">
           <h3>今日推荐</h3>

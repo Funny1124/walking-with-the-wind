@@ -160,7 +160,7 @@ h2 {
 .box {
   opacity: 0.3;
   position: fixed;
-  top: 30%;
+  top: 35%;
   left: 0.5%;
   /*height: 500px;*/
   height: 30%;

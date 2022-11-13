@@ -25,9 +25,9 @@
       </el-col>
     </el-row>
     <div  style="text-align: center">
-      <router-link to="/login">
+      <a href="https://z.qyer.com/">
         <button>查看更多商品</button>
-      </router-link>
+      </a>
     </div>
   </div>
 </template>

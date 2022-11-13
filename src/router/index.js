@@ -50,15 +50,15 @@ const routes = [
     children: [
       {
         path: 'RecommendManagement',
-        component: () => import(/* webpackChunkName: "about" */ '../components/RecommendManagement')
+        component: () => import(/* webpackChunkName: "about" */ '../views/RecommendManagement')
       },
       {
         path: 'ShopManagement',
-        component: () => import(/* webpackChunkName: "about" */ '../components/ShopManagement')
+        component: () => import(/* webpackChunkName: "about" */ '../views/ShopManagement')
       },
       {
         path: 'HotTopicManagement',
-        component: () => import(/* webpackChunkName: "about" */ '../components/HotTopicManagement')
+        component: () => import(/* webpackChunkName: "about" */ '../views/HotTopicManagement')
       },
       {
         path: 'DataAnalytics',

@@ -40,7 +40,7 @@ export default {
 <style lang="less" scoped>
 .search-bar {
   position: absolute;
-  top: 20%;
+  top: 23%;
   width: 40%;
   left: 30%;
   //text-align: center;
