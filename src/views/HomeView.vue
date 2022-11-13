@@ -13,7 +13,7 @@
     </div>
     <!--    联系我们-->
     <router-link to="/contact">
-      <img class="contact" src="@/assets/email.png" alt="联系我们">
+      <img class="contact" src="@/assets/img/email.png" alt="联系我们">
     </router-link>
     <!--    轮播图-->
     <div id="carousel" class="carousel" style="z-index: 1">
