@@ -38,6 +38,10 @@
         <!--      <el-button>取消</el-button>-->
       </el-form-item>
     </el-form>
+    <h3>或者扫描二维码与我们取得联系<br>
+      <img src="../assets/img/contractUs.png" alt="加载失败" width="200" height="200"
+           title="扫描二维码与我们取得联系哦">
+    </h3>
   </div>
 </template>
 

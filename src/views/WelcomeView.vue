@@ -5,7 +5,7 @@
       <div>
         <h3 class="float-md-start mb-0 active">Q穷游</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
-          <router-link to="/" class="nav-link ">首页</router-link>
+          <router-link to="/home" class="nav-link ">首页</router-link>
           <router-link to="/contact" class="nav-link">联系我们</router-link>
           <router-link to="/login" class="nav-link">登录</router-link>
         </nav>
@@ -20,7 +20,7 @@
       <p style="text-indent: 2em">让我们，继续，对世界上瘾！</p>
 
       <p class="lead">
-        <router-link to="/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">开始旅途</router-link>
+        <router-link to="/home" class="btn btn-lg btn-secondary fw-bold border-white bg-white">开始旅途</router-link>
       </p>
     </main>
     <footer class="mt-auto text-white-80">

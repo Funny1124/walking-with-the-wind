@@ -51,13 +51,13 @@ export default {
       if (this.username === 'admin' && this.password === '666666') {
         // 登录成功
         // 1. 存储 token
-        localStorage.setItem('token', 'Bearer xxxx')
+        localStorage.setItem('token', 'token-sdr646sg8r9s8g9srg896tr546w7th9wrt7h89')
         this.$store.commit('adminLogin')
         // 2. 跳转到后台主页
-        this.$router.push('admin')
+        this.$router.push('/admin')
         this.loginSuccess('管理员')
       } else {
-        this.$router.push('/')
+        this.$router.push('/home')
         this.$store.commit('userLogin')
         this.loginSuccess('用户')
         localStorage.removeItem('token')

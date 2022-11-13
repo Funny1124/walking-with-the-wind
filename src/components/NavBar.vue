@@ -7,7 +7,7 @@
           <router-link to="/welcome">Q穷游</router-link>
         </li>
         <li>
-          <router-link to="/">首页</router-link>
+          <router-link to="/home">首页</router-link>
         </li>
         <li>
           <router-link to="/destination">目的地</router-link>
