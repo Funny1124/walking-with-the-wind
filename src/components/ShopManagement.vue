@@ -4,7 +4,6 @@
     border
     style="width: 100%">
     <el-table-column
-      fixed
       prop="type"
       label="类型"
       width="150">
@@ -58,6 +57,7 @@ export default {
     },
     handleDelete (index, row) {
       console.log(index, row)
+      this.$store.commit('delete_shop_item', index)
     }
   },
   data () {

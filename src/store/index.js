@@ -50,6 +50,7 @@ export default new Vuex.Store({
     ],
     shop_item: [
       {
+        id: '0',
         type: '定制游',
         region: '云南',
         image: require('../assets/img/city.jpg'),
@@ -57,6 +58,7 @@ export default new Vuex.Store({
         price: '￥1998'
       },
       {
+        id: '0',
         type: '定制游',
         region: '山西',
         image: require('../assets/img/city.jpg'),
@@ -137,6 +139,10 @@ export default new Vuex.Store({
       // 增加一个带参数的mutations方法
       state.login_info.login = true
       state.login_info.type = 'user'
+    },
+    delete_shop_item (state, index) {
+      // 增加一个带参数的mutations方法
+      state.shop_item.splice(index, 1)
     }
   },
   actions: {},
