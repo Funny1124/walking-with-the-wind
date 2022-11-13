@@ -7,25 +7,17 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     name: 'home',
-    component: HomeView,
-    children: [
-      {
-        path: 'recommend',
-        name: 'recommend',
-        component: () => import(/* webpackChunkName: "about" */ '../components/RecommendTem')
-      },
-      {
-        path: 'shop',
-        name: 'shop',
-        component: () => import(/* webpackChunkName: "about" */ '../components/ShopTem')
-      },
-      {
-        path: 'hot-topic',
-        name: 'hot-topic',
-        component: () => import(/* webpackChunkName: "about" */ '../components/HotTopicTem')
-      }
-    ]
+    component: HomeView
+  },
+  {
+    path: '/welcome',
+    name: 'welcome',
+    component: () => import(/* webpackChunkName: "about" */ '../views/WelcomeView')
   },
   {
     path: '/login',

@@ -4,7 +4,7 @@
     <nav>
       <ul class="nav_links">
         <li style="font-size: 24px">
-          <router-link to="/">Q穷游</router-link>
+          <router-link to="/welcome">Q穷游</router-link>
         </li>
         <li>
           <router-link to="/">首页</router-link>
@@ -127,11 +127,6 @@ nav {
 .nav_links {
   list-style: none;
 }
-// 设置路由高亮效果
-//.router-link-active {
-//  background-color: #1ccdae;
-//  position: relative;
-//}
 .nav_links li {
   display: inline-block;
   padding: 0 10px;
