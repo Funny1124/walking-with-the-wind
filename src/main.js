@@ -13,7 +13,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 import NavBar from '@/components/NavBar'
 import FooterBar from '@/components/FooterBar'
-
+import axios from 'axios'
+Vue.prototype.$axios = axios
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin

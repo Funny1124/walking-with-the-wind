@@ -15,7 +15,7 @@
         <div class="col-lg-7 text-center text-lg-start">
           <img src="../assets/img/tree.svg" alt="logo" width="60%">
           <br>
-          <small style="margin-left: 150px">美好在路上</small>
+          <small style="margin-left: 22%">美好正在路上！</small>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
           <form class="p-4 p-md-5 border rounded-3 bg-light">
@@ -81,7 +81,7 @@ export default {
 
 <style scoped>
 .container {
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
 /*

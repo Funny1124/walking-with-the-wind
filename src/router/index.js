@@ -68,6 +68,14 @@ const routes = [
       // 用户详情页的路由规则
       // { path: 'userinfo/:id', component: UserDetail, props: true }
     ]
+  },
+  {
+    path: '/dest-detail',
+    name: 'dest-detail',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/DestDetailView')
   }
 ]
 

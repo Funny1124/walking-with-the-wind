@@ -9,7 +9,7 @@
     </div>
     <div class="item">
       <el-tag type="info" class="tag" v-for="(item, index) in $store.state.dest_item" :key="index">
-        <router-link to="/travel-data" class="link">{{ item.city }}</router-link>
+        <router-link to="/dest-detail" class="link">{{ item.city }}</router-link>
       </el-tag>
     </div>
   </div>
