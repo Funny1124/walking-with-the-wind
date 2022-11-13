@@ -39,8 +39,15 @@ export default {
           containLabel: true
         },
         toolbox: {
+          show: true,
           feature: {
-            saveAsImage: {}
+            mark: { show: true },
+            dataView: {
+              show: true,
+              readOnly: false
+            },
+            restore: { show: true },
+            saveAsImage: { show: true }
           }
         },
         xAxis: {
@@ -85,6 +92,6 @@ export default {
 
 <style scoped>
 #DataTotalUsers {
-  height: 500px;
+  height: 600px;
 }
 </style>

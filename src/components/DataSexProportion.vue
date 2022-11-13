@@ -26,9 +26,24 @@ export default {
       const myChart = this.$echarts.init(compareNewUsers)
       const option = {
         legend: {},
+        title: {
+          text: '性别比例'
+        },
         tooltip: {
           trigger: 'axis',
           showContent: false
+        },
+        toolbox: {
+          show: true,
+          feature: {
+            mark: { show: true },
+            dataView: {
+              show: true,
+              readOnly: false
+            },
+            restore: { show: true },
+            saveAsImage: { show: true }
+          }
         },
         dataset: {
           source: [
@@ -39,7 +54,7 @@ export default {
         },
         xAxis: { type: 'category' },
         yAxis: { gridIndex: 0 },
-        grid: { top: '55%' },
+        grid: { top: '65%' },
         series: [
           {
             type: 'line',
@@ -101,6 +116,6 @@ export default {
 
 <style scoped>
 #DataSexProportion {
-  height: 500px;
+  height: 600px;
 }
 </style>

@@ -64,19 +64,8 @@ export default {
 
 // 设置路由高亮效果
 .router-link-active {
-  background-color: #efefef;
+  background-color: #1ccdae;
   box-sizing: border-box;
   position: relative;
-  // 伪元素实现路由高亮效果
-  &::before {
-    content: ' ';
-    display: block;
-    width: 4px;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #42b983;
-  }
 }
 </style>

@@ -127,7 +127,11 @@ nav {
 .nav_links {
   list-style: none;
 }
-
+// 设置路由高亮效果
+//.router-link-active {
+//  background-color: #1ccdae;
+//  position: relative;
+//}
 .nav_links li {
   display: inline-block;
   padding: 0 10px;
