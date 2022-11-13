@@ -81,7 +81,6 @@ export default {
           }
         ]
       }
-
       const compareNewUsers = this.$echarts.init(document.getElementById('DataNewUsers')) // 图标初始化
       compareNewUsers.setOption(option)
     }

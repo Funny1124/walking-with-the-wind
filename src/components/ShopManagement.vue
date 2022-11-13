@@ -3,7 +3,7 @@
     <el-button
       type="primary"
       size="big"
-      @click="handleAdd">添加
+      @click="handleAdd;dialogFormVisible=true">添加
     </el-button>
 
     <el-table
@@ -43,7 +43,7 @@
         <template slot-scope="scope">
           <el-button
             size="mini"
-            @click="handleEdit(scope.$index, scope.row)">编辑
+            @click="setTemp_item(scope.$index, scope.row) ;dialogFormVisible=true">编辑
           </el-button>
           <el-button
             size="mini"
@@ -53,6 +53,29 @@
         </template>
       </el-table-column>
     </el-table>
+    <el-dialog title="修改" :visible.sync="dialogFormVisible">
+      <el-form :model="temp_item">
+        <el-form-item label="类型" :label-width="formLabelWidth">
+          <el-input v-model="temp_item.type" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="图片" :label-width="formLabelWidth">
+          <el-input v-model="temp_item.image" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="地区" :label-width="formLabelWidth">
+          <el-input v-model="temp_item.region" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="描述" :label-width="formLabelWidth">
+          <el-input v-model="temp_item.description" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="价格" :label-width="formLabelWidth">
+          <el-input v-model="temp_item.price" autocomplete="off"></el-input>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button type="primary" @click="dialogFormVisible = false;handleEdit(index,temp_item)">确 定</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -61,19 +84,33 @@ export default {
   name: 'ShopManagement',
   data () {
     return {
+      dialogFormVisible: false,
+      formLabelWidth: '300px',
+      index: '',
+      row: '',
       temp_item: {
-        type: '自由',
-        region: '深圳',
+        type: '',
+        region: '',
         image: '',
-        description: '的弗兰克噶不好认个人工',
-        price: '￥998'
+        description: '',
+        price: ''
       }
     }
   },
   methods: {
-    handleEdit (index, row) {
-      console.log(index, row)
-      this.$store.commit('edit_shop_item', [index, this.temp_item])
+    setTemp_item (index, row) {
+      console.log(index, row.type)
+      this.index = index
+      this.row = row
+      this.temp_item.type = row.type
+      this.temp_item.region = row.region
+      this.temp_item.image = row.image
+      this.temp_item.description = row.description
+      this.temp_item.price = row.price
+    },
+    handleEdit (index, item) {
+      this.$store.commit('edit_shop_item', [index, item])
+      this.$forceUpdate()
     },
     handleDelete (index, row) {
       console.log(index, row)
