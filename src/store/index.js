@@ -123,6 +123,50 @@ export default new Vuex.Store({
         image: require('../assets/img/city.jpg'),
         description: '梧州，广西壮族自治区辖地级市。位于广西东部，地处西江黄金水道'
       }
+    ],
+    guilin_ticket: [
+      {
+        type: '定制游',
+        region: '桂林-漓江',
+        image: require('../assets/img/lijiang.png'),
+        description: '从阳朔到桂林全方位游览感觉漓江风光，遇龙河漂流感觉很棒。风景如画，每一步，每一眼都是绚丽的明信片。来桂林，一定不能错过的一个景点.',
+        price: '￥480'
+      },
+      {
+        type: '定制游',
+        region: '桂林-象山公园',
+        image: require('../assets/img/xsgy.png'),
+        description: '山顶平展，树木成荫，小径通幽；明代建筑普贤塔耸立于此，塔高10余米，普贤塔形似剑柄，又似宝瓶，古朴凝重；象山公园自然景观，人文景观交相辉映，使得古老而年轻的象山魅力独具',
+        price: '￥80'
+      },
+      {
+        type: '定制游',
+        region: '桂林-两江四湖',
+        image: require('../assets/img/ljsh.png'),
+        description: '城市景观喝自然景观相结合的典范。无论坐船游两江四湖，还是在岸上走路游都有不同的经历和感受。春夏秋冬不同季节游玩都有不同的景色和惊喜',
+        price: '￥180'
+      },
+      {
+        type: '定制游',
+        region: '桂林-日月双塔',
+        image: require('../assets/img/ryst.png'),
+        description: '日月双塔地处桂林市中心区，坐落在桂林城的中轴线上，与“象山水月”相邻。象山是桂林的城徽，而双塔则是新桂林的标识。',
+        price: '￥49'
+      },
+      {
+        type: '定制游',
+        region: '桂林-兴坪古镇',
+        image: require('../assets/img/xpgz.png'),
+        description: '兴坪古镇有九马画山、螺蛳山、莲花岩、天水寨、灵宝阁等八大景区、24个风景点让人叹为观止。',
+        price: '￥180'
+      },
+      {
+        type: '定制游',
+        region: '桂林-靖江王府',
+        image: require('../assets/img/jjwf.png'),
+        description: '靖江王城坐落于桂林市中心，它是明太祖朱元璋其侄孙朱守谦被封为靖江王时修造的王城，为一组金碧辉煌、规模宏大的建筑群，被评为中国5A景区.',
+        price: '￥98'
+      }
     ]
 
   },

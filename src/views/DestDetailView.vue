@@ -9,7 +9,7 @@
       </el-row>
       <h2>推荐景点</h2>
       <el-table
-        :data="$store.state.shop_item"
+        :data="$store.state.guilin_ticket"
         class="table-tick"
         :header-cell-style="{ textAlign: 'center' }"
         :cell-style="{ textAlign: 'center' }"
@@ -23,7 +23,7 @@
           label="图片"
           width="180">
           <template slot-scope="scope">
-            <img :src=scope.row.image alt="加载失败" style="height: 100px; width: 160px;">
+            <img :src=scope.row.image alt="加载失败" style="height: 100px; width: 160px;border-radius: 4px">
           </template>
         </el-table-column>
         <el-table-column
