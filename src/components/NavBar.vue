@@ -3,8 +3,8 @@
     <!--    <img src="../assets/logo.png" class="logo" alt="logo">-->
     <nav>
       <ul class="nav_links">
-        <li style="font-size: 24px">
-          <router-link to="/welcome">S随风</router-link>
+        <li>
+          <router-link to="/welcome" class="s-band">S随风</router-link>
         </li>
         <li>
           <router-link to="/home">首页</router-link>
@@ -130,6 +130,7 @@ nav {
 .nav_links {
   list-style: none;
 }
+
 .nav_links li {
   display: inline-block;
   padding: 0 10px;
@@ -140,23 +141,25 @@ nav {
 }
 
 .nav_links li a:hover {
-  border-radius: 1px;
+  border-radius: 4px;
   border-bottom: rgba(255, 255, 255, .75);
   border-bottom: .25rem solid;
   box-sizing: border-box;
   position: relative;
 }
+
 // 设置路由高亮效果
 .router-link-active {
   //background-color: rgba(28, 205, 174, 0.93);
   padding: 3px 5px;
-  border-radius: 1px;
+  border-radius: 4px;
   font-size: 18px;
   border-bottom: white;
   border-bottom: .25rem solid;
   box-sizing: border-box;
   position: relative;
 }
+
 .login-button {
   padding: 5px 25px;
   background-color: #1580ff;
@@ -167,5 +170,13 @@ nav {
 
 .login-button:hover {
   background-color: rgb(15, 176, 127);
+}
+.s-band {
+  font-size: 20px;
+}
+.s-band:hover {
+  padding: 3px 5px !important;
+  border-radius: 4px !important;
+  background-color: #02db94 !important;
 }
 </style>
