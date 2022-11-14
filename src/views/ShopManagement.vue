@@ -8,12 +8,13 @@
 
     <el-table
       :data="$store.state.shop_item"
-      border
-      style="width: 100%">
+      :header-cell-style="{ textAlign: 'center' }"
+      :cell-style="{ textAlign: 'center' }"
+    >
       <el-table-column
         prop="type"
         label="类型"
-        width="150">
+        width="100">
       </el-table-column>
       <el-table-column
         label="图片"
@@ -30,7 +31,7 @@
       <el-table-column
         prop="description"
         label="描述"
-        width="1000">
+        width="600">
       </el-table-column>
       <el-table-column
         prop="price"

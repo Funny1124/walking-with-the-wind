@@ -1,13 +1,13 @@
 <template>
   <el-table
     :data="$store.state.recommend_item"
-    border
-    style="width: 100%">
+    :header-cell-style="{ textAlign: 'center' }"
+    :cell-style="{ textAlign: 'center' }"
+  >
     <el-table-column
-      fixed
       prop="type"
       label="类型"
-      width="150">
+      width="100">
     </el-table-column>
     <el-table-column
       label="图片"
@@ -24,7 +24,12 @@
     <el-table-column
       prop="description"
       label="描述"
-      width="1000">
+      width="600">
+    </el-table-column>
+    <el-table-column
+      prop="price"
+      label="价格"
+      width="120">
     </el-table-column>
     <el-table-column
       label="操作"
@@ -32,7 +37,7 @@
       <template slot-scope="scope">
         <el-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">编辑
+          @click="setTemp_item(scope.$index, scope.row) ;dialogFormVisible=true">编辑
         </el-button>
         <el-button
           size="mini"

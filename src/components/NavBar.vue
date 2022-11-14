@@ -74,8 +74,8 @@
         <el-avatar :src="$store.state.login_info.avatar" size="medium"></el-avatar>
       </div>
     </router-link>
-    <router-link to="/admin" v-if="$store.state.login_info.type==='admin'">
-      <button>后台管理</button>
+    <router-link to="/admin" v-if="$store.state.login_info.type==='admin'" class="login-button">
+      后台管理
     </router-link>
   </header>
 
@@ -156,16 +156,15 @@ nav {
   box-sizing: border-box;
   position: relative;
 }
-button {
+.login-button {
   padding: 5px 25px;
   background-color: #1580ff;
-  border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 
-button:hover {
+.login-button:hover {
   background-color: rgb(15, 176, 127);
 }
 </style>
