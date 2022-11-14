@@ -2,10 +2,11 @@
   <!--    轮播图-->
   <div>
     <el-carousel trigger="click" height="640px">
-      <el-carousel-item v-for="(item, index) in new_list" :key="index">
+      <el-carousel-item v-for="(item, index) in $store.state.carousel_item" :key="index">
         <div class="pic_item">
           <img class="small" :src="item.image" alt=""/>
-          <h3>{{ item.description }}</h3>
+          <h2>{{item.region}}</h2>
+          <p>{{ item.description }}</p>
         </div>
       </el-carousel-item>
     </el-carousel>
@@ -14,13 +15,7 @@
 
 <script>
 export default {
-  name: 'CarouselTem',
-  props: ['info_list'],
-  data () {
-    return {
-      new_list: this.info_list
-    }
-  }
+  name: 'CarouselTem'
 }
 </script>
 
@@ -31,10 +26,9 @@ export default {
   height: 100%;
 }
 
-.el-carousel__item h3 {
+.el-carousel__item h2 {
   color: white;
   font-size: 0.8rem;
-  opacity: 0.75;
   margin: 0;
 }
 .small {
@@ -57,15 +51,24 @@ export default {
   height: 100%;
 }
 
-.pic_item h3 {
+.pic_item h2 {
   border-radius: 8px;
-  font-size: 20px;
-  color: black;
-  background-color: #99a9bf;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
   padding: 8px 10px;
   position: absolute;
   right: 5%;
-  bottom: 5%;
+  bottom: 15%;
 }
 
+.pic_item p {
+  border-radius: 8px;
+  font-size: 20px;
+  color: white;
+  padding: 8px 10px;
+  position: absolute;
+  right: 1%;
+  bottom: 5%;
+}
 </style>
