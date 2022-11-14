@@ -3,7 +3,9 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
       <div>
-        <h3 class="float-md-start mb-0 active">S随风</h3>
+        <h3 class="float-md-start mb-0 active">
+          <router-link to="/welcome" class="text-white nav-link">S随风</router-link>
+        </h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <router-link to="/home" class="nav-link ">首页</router-link>
           <router-link to="/contact" class="nav-link">联系我们</router-link>
@@ -24,7 +26,8 @@
       </p>
     </main>
     <footer class="mt-auto text-white-80">
-      <p>随风而行，为旅行者提供原创实用的出境游旅行指南和旅游攻略、旅行社区和问答交流平台，并提供签证、保险、机票、酒店预订、租车等服务。</p>
+      <p>
+        随风而行，为旅行者提供原创实用的出境游旅行指南和旅游攻略、旅行社区和问答交流平台，并提供签证、保险、机票、酒店预订、租车等服务。</p>
     </footer>
   </div>
   </body>
@@ -93,5 +96,4 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
 </style>

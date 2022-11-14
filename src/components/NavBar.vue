@@ -66,7 +66,7 @@
       </ul>
     </nav>
     <router-link to="/login" v-if="$store.state.login_info.login===false">
-      <button>login</button>
+      <button class="login-button" style="border: transparent">login</button>
     </router-link>
     <router-link to="/login" v-if="$store.state.login_info.login===true">
       <!--      <button>login</button>-->
@@ -140,26 +140,27 @@ nav {
 }
 
 .nav_links li a:hover {
-  //color: rgb(15, 176, 127);
-  font-size: 18px;
-  background-color: #1ccdae;
-  padding: 3px 5px;
-  border-radius: 8px;
+  border-radius: 1px;
+  border-bottom: rgba(255, 255, 255, .75);
+  border-bottom: .25rem solid;
   box-sizing: border-box;
   position: relative;
 }
 // 设置路由高亮效果
 .router-link-active {
-  background-color: #1ccdae;
+  //background-color: rgba(28, 205, 174, 0.93);
   padding: 3px 5px;
-  border-radius: 8px;
+  border-radius: 1px;
+  font-size: 18px;
+  border-bottom: white;
+  border-bottom: .25rem solid;
   box-sizing: border-box;
   position: relative;
 }
 .login-button {
   padding: 5px 25px;
   background-color: #1580ff;
-  border-radius: 50px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
