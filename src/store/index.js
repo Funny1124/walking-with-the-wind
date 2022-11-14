@@ -81,6 +81,7 @@ export default new Vuex.Store({
         region: '云南',
         image: require('../assets/img/ynljdl.png'),
         description: '全国往返云南丽江大理5日自由行（邂逅丽江古城+登顶玉龙雪山+洱海骑行+可调整天数/航班/高铁+全国出发）',
+        address: 'https://z.qyer.com/deal/145394/',
         price: '￥1998'
       },
       {
@@ -88,6 +89,7 @@ export default new Vuex.Store({
         region: '山西',
         image: require('../assets/img/sx.png'),
         description: '全国往返山西5天4晚自由行（五台山+菩萨顶+广化寺+殊像寺+五爷庙+悬空寺+应县木塔+云冈石窟+太原+乔家大院+平遥古城+明清一条街）',
+        address: 'https://z.qyer.com/deal/144650/',
         price: '￥2198'
       },
       {
@@ -95,6 +97,7 @@ export default new Vuex.Store({
         region: '新疆',
         image: require('../assets/img/xj.png'),
         description: '全国往返新疆8日自由行（东方瑞士喀纳斯+网红打卡五彩滩+安集海大峡谷+可调整天数/航班+全国出发）',
+        address: 'https://z.qyer.com/deal/144604/',
         price: '￥2398'
       },
       {
@@ -102,6 +105,7 @@ export default new Vuex.Store({
         region: '桂林',
         image: require('../assets/img/gl.png'),
         description: '全国往返龙脊游江线4日自由行（龙脊梯田+黄洛瑶寨+漓江风光+兴坪古镇+十里画廊+遇龙河漂流+阳朔西街+银子岩+象鼻山）',
+        address: 'https://z.qyer.com/deal/144610/',
         price: '￥2498'
       },
       {
@@ -109,6 +113,7 @@ export default new Vuex.Store({
         region: '河北',
         image: require('../assets/img/fhzjj.png'),
         description: '全国往返凤凰张家界5天4晚半自由行（芙蓉镇+凤凰古城+湘西苗寨+天门山+玻璃栈道+黄龙洞+杨家界+袁家界+魅力湘西+金鞭溪+土司城）',
+        address: 'https://z.qyer.com/deal/146184/',
         price: '￥2598'
       },
       {
@@ -116,6 +121,7 @@ export default new Vuex.Store({
         region: '桂林',
         image: require('../assets/img/gljx.png'),
         description: '全国往返桂林4日自由行（龙脊梯田+漓江皮划艇+热气球体验+阳朔骑行+可调整天数/航班/高铁+全国出发）',
+        address: 'https://z.qyer.com/deal/145471/',
         price: '￥2480'
       }
     ],
