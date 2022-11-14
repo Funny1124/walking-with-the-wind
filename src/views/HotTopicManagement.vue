@@ -1,52 +1,55 @@
 <template>
-  <el-table
-    :data="$store.state.recommend_item"
-    :header-cell-style="{ textAlign: 'center' }"
-    :cell-style="{ textAlign: 'center' }"
-  >
-    <el-table-column
-      prop="type"
-      label="类型"
-      width="100">
-    </el-table-column>
-    <el-table-column
-      label="图片"
-      width="180">
-      <template slot-scope="scope">
-        <img :src=scope.row.image alt="加载失败" style="height: 100px; width: 160px;">
-      </template>
-    </el-table-column>
-    <el-table-column
-      prop="region"
-      label="地区"
-      width="120">
-    </el-table-column>
-    <el-table-column
-      prop="description"
-      label="描述"
-      width="600">
-    </el-table-column>
-    <el-table-column
-      prop="price"
-      label="价格"
-      width="120">
-    </el-table-column>
-    <el-table-column
-      label="操作"
-      width="200">
-      <template slot-scope="scope">
-        <el-button
-          size="mini"
-          @click="setTemp_item(scope.$index, scope.row) ;dialogFormVisible=true">编辑
-        </el-button>
-        <el-button
-          size="mini"
-          type="danger"
-          @click="handleDelete(scope.$index, scope.row)">删除
-        </el-button>
-      </template>
-    </el-table-column>
-  </el-table>
+  <div class="data-map">
+    <el-table
+      :data="$store.state.recommend_item"
+      :header-cell-style="{ textAlign: 'center' }"
+      :cell-style="{ textAlign: 'center' }"
+      style="border-radius: 8px"
+    >
+      <el-table-column
+        prop="type"
+        label="类型"
+        width="100">
+      </el-table-column>
+      <el-table-column
+        label="图片"
+        width="180">
+        <template slot-scope="scope">
+          <img :src=scope.row.image alt="加载失败" style="height: 100px; width: 160px; border-radius: 4px">
+        </template>
+      </el-table-column>
+      <el-table-column
+        prop="region"
+        label="地区"
+        width="120">
+      </el-table-column>
+      <el-table-column
+        prop="description"
+        label="描述"
+        width="600">
+      </el-table-column>
+      <el-table-column
+        prop="price"
+        label="价格"
+        width="120">
+      </el-table-column>
+      <el-table-column
+        label="操作"
+        width="200">
+        <template slot-scope="scope">
+          <el-button
+            size="mini"
+            @click="handleEdit">编辑
+          </el-button>
+          <el-button
+            size="mini"
+            type="danger"
+            @click="handleDelete(scope.$index, scope.row)">删除
+          </el-button>
+        </template>
+      </el-table-column>
+    </el-table>
+  </div>
 </template>
 
 <script>
@@ -63,4 +66,12 @@ export default {
   data () {
     return {}
   }
-}</script>
+}
+</script>
+<style scoped lang="less">
+.data-map {
+  background-color: #1ccdae;
+  padding: 10px;
+  border-radius: 8px;
+}
+</style>

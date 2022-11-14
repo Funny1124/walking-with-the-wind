@@ -14,9 +14,9 @@
       <li class="menu-item">
         <router-link to="/admin/DataAnalytics">数据分析</router-link>
       </li>
-<!--      <li class="menu-item">-->
-<!--        <router-link to="/admin">系统设置</router-link>-->
-<!--      </li>-->
+      <!--      <li class="menu-item">-->
+      <!--        <router-link to="/admin">系统设置</router-link>-->
+      <!--      </li>-->
     </ul>
   </div>
 </template>
@@ -29,7 +29,8 @@ export default {
 
 <style lang="less" scoped>
 .layout-aside-container {
-  width: 250px;
+  padding: 12px 0;
+  width: 8%;
   height: 100%;
   border-right: 1px solid #eaeaea;
 }
@@ -53,7 +54,8 @@ export default {
     a {
       display: block;
       color: black;
-      padding-left: 30px;
+      padding: 5px 25%;
+      text-decoration: none;
 
       &:hover {
         text-decoration: none;
@@ -65,7 +67,9 @@ export default {
 // 设置路由高亮效果
 .router-link-active {
   background-color: #1ccdae;
+  border-radius: 4px;
   box-sizing: border-box;
+  text-decoration: none;
   position: relative;
 }
 </style>

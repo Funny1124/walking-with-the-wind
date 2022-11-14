@@ -1,15 +1,12 @@
 <template>
-  <div>
-    <el-button
-      type="primary"
-      size="big"
-      @click="AddFormVisible=true">添加
+  <div class="data-map">
+    <el-button round @click="AddFormVisible=true" class="add-btn">添加
     </el-button>
-
     <el-table
       :data="$store.state.shop_item"
       :header-cell-style="{ textAlign: 'center' }"
       :cell-style="{ textAlign: 'center' }"
+      style="border-radius: 8px"
     >
       <el-table-column
         prop="type"
@@ -20,7 +17,7 @@
         label="图片"
         width="180">
         <template slot-scope="scope">
-          <img :src=scope.row.image alt="加载失败" style="height: 100px; width: 160px;">
+          <img :src=scope.row.image alt="加载失败" style="height: 100px; width: 160px;border-radius: 4px">
         </template>
       </el-table-column>
       <el-table-column
@@ -198,3 +195,22 @@ export default {
   }
 }
 </script>
+<style scoped lang="less">
+.data-map {
+  background-color: #1ccdae;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.add-btn {
+  padding: 6px 15px;
+  width: 80px;
+  margin: 0 0 10px 8px;
+  tab-size: 20px;
+}
+.add-btn:hover {
+  color: white;
+  font-weight: 500;
+  background-color: #ee3f4d;
+}
+</style>

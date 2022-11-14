@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="data-map">
-      <el-row :gutter="20" style="margin: 20px 0">
+      <el-row :gutter="10" style="margin: 10px 0">
         <el-col :span="12">
           <data-new-users></data-new-users>
         </el-col>
@@ -9,7 +9,7 @@
           <data-total-users></data-total-users>
         </el-col>
       </el-row>
-      <el-row :gutter="20" style="margin: 20px 0">
+      <el-row :gutter="10" style="margin: 10px 0">
         <el-col :span="12">
           <data-sex-proportion></data-sex-proportion>
         </el-col>
