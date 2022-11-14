@@ -208,9 +208,10 @@ export default {
   margin: 0 0 10px 8px;
   tab-size: 20px;
 }
+
 .add-btn:hover {
   color: white;
   font-weight: 500;
-  background-color: #ee3f4d;
+  background-color: #e82c5f;
 }
 </style>

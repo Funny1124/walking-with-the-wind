@@ -24,66 +24,110 @@ export default {
     initChart () {
       const compareNewUsers = document.getElementById('DataSexProportion')// 图标初始化
       const myChart = this.$echarts.init(compareNewUsers)
+      const data1 = [
+        {
+          name: '男',
+          value: 70
+        },
+        {
+          name: '女',
+          value: 75
+        }
+      ]
+      const data2 = [
+        {
+          name: '男',
+          value: 75
+        },
+        {
+          name: '女',
+          value: 72
+        }
+      ]
+      const data3 = [
+        {
+          name: '男',
+          value: 80
+        },
+        {
+          name: '女',
+          value: 73
+        }
+      ]
       const option = {
-        legend: {},
-        title: {
-          text: '性别比例'
-        },
-        tooltip: {
-          trigger: 'axis',
-          showContent: false
-        },
-        toolbox: {
-          show: true,
-          feature: {
-            mark: { show: true },
-            dataView: {
-              show: true,
-              readOnly: false
-            },
-            restore: { show: true },
-            saveAsImage: { show: true }
-          }
-        },
-        dataset: {
-          source: [
-            ['product', '2019', '2020', '2021', '2022'],
-            ['男', 56.5, 82.1, 88.7, 70.1],
-            ['女', 51.1, 51.4, 55.1, 53.3]
-          ]
-        },
-        xAxis: { type: 'category' },
-        yAxis: { gridIndex: 0 },
-        grid: { top: '65%' },
-        series: [
+        title: [
           {
-            type: 'line',
-            smooth: true,
-            seriesLayoutBy: 'row',
-            emphasis: { focus: 'series' }
+            text: '用户男女比例变化',
+            left: 'center'
           },
           {
-            type: 'line',
-            smooth: true,
-            seriesLayoutBy: 'row',
-            emphasis: { focus: 'series' }
+            subtext: '2020年',
+            left: '16.67%',
+            top: '75%',
+            textAlign: 'center'
+          },
+          {
+            subtext: '2021年',
+            left: '50%',
+            top: '75%',
+            textAlign: 'center'
+          },
+          {
+            subtext: '202年',
+            left: '83.33%',
+            top: '75%',
+            textAlign: 'center'
+          }
+        ],
+        tooltip: {
+          trigger: 'item',
+          formatter: '{a} <br/>{b} : {c} ({d}%)'
+        },
+        series: [
+          {
+            type: 'pie',
+            radius: '60%',
+            center: ['50%', '50%'],
+            data: data1,
+            label: {
+              position: 'outer',
+              alignTo: 'none',
+              bleedMargin: 5
+            },
+            left: 0,
+            right: '66.6667%',
+            top: 0,
+            bottom: 0
           },
           {
             type: 'pie',
-            id: 'pie',
-            radius: '30%',
-            center: ['50%', '25%'],
-            emphasis: {
-              focus: 'self'
-            },
+            radius: '60%',
+            center: ['50%', '50%'],
+            data: data2,
             label: {
-              formatter: '{b}: {@2012} ({d}%)'
+              position: 'outer',
+              alignTo: 'labelLine',
+              bleedMargin: 5
             },
-            encode: {
-              itemName: 'product',
-              value: '2012',
-              tooltip: '2012'
-            }
+            left: '33.3333%',
+            right: '33.3333%',
+            top: 0,
+            bottom: 0
+          },
+          {
+            type: 'pie',
+            radius: '60%',
+            center: ['50%', '50%'],
+            data: data3,
+            label: {
+              position: 'outer',
+              alignTo: 'labelLine',
+              bleedMargin: 5
+            },
+            left: '66.6666%',
+            right: 0,
+            top: 0,
+            bottom: 0
           }
         ]
       }

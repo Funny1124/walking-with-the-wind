@@ -1,5 +1,7 @@
 <template>
   <div class="data-map">
+    <el-button round @click="AddFormVisible=true" class="add-btn">添加
+    </el-button>
     <el-table
       :data="$store.state.recommend_item"
       :header-cell-style="{ textAlign: 'center' }"
@@ -73,5 +75,18 @@ export default {
   background-color: #1ccdae;
   padding: 10px;
   border-radius: 8px;
+}
+
+.add-btn {
+  padding: 6px 15px;
+  width: 80px;
+  margin: 0 0 10px 8px;
+  tab-size: 20px;
+}
+
+.add-btn:hover {
+  color: white;
+  font-weight: 500;
+  background-color: #e82c5f;
 }
 </style>

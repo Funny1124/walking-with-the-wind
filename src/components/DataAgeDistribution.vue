@@ -24,7 +24,8 @@ export default {
     initChart () {
       const option = {
         title: {
-          text: '年龄段占比'
+          text: '用户各年龄段占比',
+          left: 'center'
         },
         legend: {
           top: 'bottom'
