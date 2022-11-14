@@ -50,7 +50,7 @@
         <el-table-column
           label="操作"
           width="150">
-          <el-button type="danger" round>购票</el-button>
+          <el-button type="primary" round>购票</el-button>
         </el-table-column>
       </el-table>
     </div>
@@ -82,5 +82,9 @@ h2 {
 .table-tick {
   text-align: center;
   border-radius: 4px;
+}
+.el-button:hover {
+  border: none;
+  background-color: #e82b5e;
 }
 </style>

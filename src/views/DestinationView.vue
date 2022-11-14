@@ -1,6 +1,13 @@
 <template>
   <div>
     <nav-bar></nav-bar>
+    <div style="margin: 20px 15%; text-align: center;display: block">
+      <el-row style="margin: 20px 0; background-color: white; border-radius: 4px;padding: 10px 0">
+        <el-col>
+          <img src="../assets/img/nice-view.svg" alt="彩虹" width="30%">
+        </el-col>
+      </el-row>
+    </div>
     <div class="search">
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="请输入目的地，如：桂林电子科技大学" aria-label="Search">

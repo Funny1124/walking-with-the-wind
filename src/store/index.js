@@ -132,29 +132,19 @@ export default new Vuex.Store({
         description: '桂林，简称“桂”，广西壮族自治区辖地级市、省域副中心城市'
       },
       {
-        city: '南宁',
-        image: require('../assets/img/river.jpg'),
-        description: '南宁，简称“邕”，别称绿城、邕城，是广西壮族自治区辖地级市'
+        city: '318线'
       },
       {
-        city: '深圳',
-        image: require('../assets/img/river.jpg'),
-        description: '深圳，简称“深”，别称鹏城，广东省辖地级市，是广东省副省级市'
+        city: '新疆'
       },
       {
-        city: '广州',
-        image: require('../assets/img/city.jpg'),
-        description: '广州，简称“穗”，别称羊城、花城，是广东省辖地级市'
+        city: '内蒙古'
       },
       {
-        city: '东莞',
-        image: require('../assets/img/river.jpg'),
-        description: '东莞，广东省辖地级市，国务院确定的珠江三角洲东岸中心城市。'
+        city: '贝加尔湖'
       },
       {
-        city: '梧州',
-        image: require('../assets/img/city.jpg'),
-        description: '梧州，广西壮族自治区辖地级市。位于广西东部，地处西江黄金水道'
+        city: '梧州'
       }
     ],
     guilin_ticket: [

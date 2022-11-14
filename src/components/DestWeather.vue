@@ -24,7 +24,7 @@ export default {
     initChart () {
       const option = {
         title: {
-          text: '最近一周天气情况'
+          text: '当地最近一周天气情况'
         },
         tooltip: {
           trigger: 'axis'
