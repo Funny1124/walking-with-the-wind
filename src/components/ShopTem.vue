@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>穷游商城</h2>
+    <h2>随风商城</h2>
     <el-row>
       <!--        style="max-width: 540px;"-->
       <el-col :span="8" v-for="(item, index) in $store.state.shop_item" :key="index" style="padding: 10px">

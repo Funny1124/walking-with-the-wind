@@ -3,7 +3,7 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
       <div>
-        <h3 class="float-md-start mb-0 active">Q穷游</h3>
+        <h3 class="float-md-start mb-0 active">S随风</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <router-link to="/home" class="nav-link ">首页</router-link>
           <router-link to="/contact" class="nav-link">联系我们</router-link>
@@ -12,11 +12,11 @@
       </div>
     </header>
     <main class="px-3">
-      <h1>欢迎来到穷游</h1>
-      <p style="text-indent: 2em">旅行，是穷游的一切。</p>
+      <h1>欢迎来到随风而行</h1>
+      <p style="text-indent: 2em">伴随着风，走遍世界的每一个角落。</p>
       <p style="text-indent: 2em">我们和大家一样热爱旅行，我们相信：</p>
       <p style="text-indent: 2em">无论你因为什么出发，旅行，都会让你的生命更加丰富多彩。</p>
-      <p style="text-indent: 2em">穷游愿意陪你继续体验整个世界的精彩。</p>
+      <p style="text-indent: 2em">风愿意陪你继续体验整个世界的精彩。</p>
       <p style="text-indent: 2em">让我们，继续，对世界上瘾！</p>
 
       <p class="lead">
@@ -24,7 +24,7 @@
       </p>
     </main>
     <footer class="mt-auto text-white-80">
-      <p>穷游网为旅行者提供原创实用的出境游旅行指南和旅游攻略、旅行社区和问答交流平台，并提供签证、保险、机票、酒店预订、租车等服务。</p>
+      <p>随风而行，为旅行者提供原创实用的出境游旅行指南和旅游攻略、旅行社区和问答交流平台，并提供签证、保险、机票、酒店预订、租车等服务。</p>
     </footer>
   </div>
   </body>

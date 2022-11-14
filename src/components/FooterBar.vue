@@ -2,7 +2,7 @@
   <div class="footer_bar">
     <footer class="row row-cols-5 py-5 border-top footer_bar">
       <div class="col" style="text-align: center">
-        <img :src="require('@/assets/img/logo.png')" alt="logo" width="50px" height="50px">
+        <img :src="require('@/assets/img/logo.svg')" alt="logo" width="50px" height="50px">
         <p class="text-muted">&copy; 2021</p>
       </div>
       <div class="col">

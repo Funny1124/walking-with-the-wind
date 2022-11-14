@@ -2,7 +2,7 @@
   <div>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="background-color: #1ccdae">
       <header class="mb-auto text-white" style="padding: 0 30%">
-        <h3 class="float-md-start mb-0">Q穷游</h3>
+        <h3 class="float-md-start mb-0">S随风</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <router-link to="/home" class="nav-link ">首页</router-link>
           <router-link to="/contact" class="nav-link">联系我们</router-link>

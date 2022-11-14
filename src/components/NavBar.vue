@@ -4,7 +4,7 @@
     <nav>
       <ul class="nav_links">
         <li style="font-size: 24px">
-          <router-link to="/welcome">Q穷游</router-link>
+          <router-link to="/welcome">S随风</router-link>
         </li>
         <li>
           <router-link to="/home">首页</router-link>
@@ -111,7 +111,10 @@ header {
 }
 
 .el-dropdown-menu__item:hover {
-  background-color: #198754;
+  //background-color: #198754;
+  background-color: #1ccdae;
+  border-radius: 8px;
+  margin: 0 3px;
   color: white;
 }
 
@@ -137,10 +140,22 @@ nav {
 }
 
 .nav_links li a:hover {
-  color: rgb(15, 176, 127);
-  font-size: 24px;
+  //color: rgb(15, 176, 127);
+  font-size: 18px;
+  background-color: #1ccdae;
+  padding: 3px 5px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
 }
-
+// 设置路由高亮效果
+.router-link-active {
+  background-color: #1ccdae;
+  padding: 3px 5px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
+}
 button {
   padding: 5px 25px;
   background-color: #1580ff;

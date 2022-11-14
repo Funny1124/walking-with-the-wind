@@ -6,7 +6,7 @@
         <router-link to="/admin/RecommendManagement">今日推荐</router-link>
       </li>
       <li class="menu-item">
-        <router-link to="/admin/ShopManagement">穷游商城</router-link>
+        <router-link to="/admin/ShopManagement">随风商城</router-link>
       </li>
       <li class="menu-item">
         <router-link to="/admin/HotTopicManagement">热门话题</router-link>
