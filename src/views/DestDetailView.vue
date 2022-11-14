@@ -7,6 +7,12 @@
           <dest-weather></dest-weather>
         </el-col>
       </el-row>
+      <el-row style="margin: 20px 0; background-color: white; border-radius: 4px;padding: 10px 0">
+        <el-col>
+          <img src="../assets/img/rainbow.svg" alt="彩虹" width="15%">
+          <h3 style="color: dimgray">接下来几天当地天气不错，放心享受旅行吧！</h3>
+        </el-col>
+      </el-row>
       <h2>推荐景点</h2>
       <el-table
         :data="$store.state.guilin_ticket"
@@ -29,21 +35,21 @@
         <el-table-column
           prop="region"
           label="地区"
-          width="120">
+          width="150">
         </el-table-column>
         <el-table-column
           prop="description"
           label="描述"
-          width="480">
+          width="680">
         </el-table-column>
         <el-table-column
           prop="price"
           label="价格"
-          width="120">
+          width="160">
         </el-table-column>
         <el-table-column
           label="操作"
-          width="100">
+          width="150">
           <el-button type="danger" round>购票</el-button>
         </el-table-column>
       </el-table>
