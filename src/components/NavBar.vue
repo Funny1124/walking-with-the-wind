@@ -142,6 +142,7 @@ nav {
 
 .nav_links li a:hover {
   border-radius: 4px;
+  background-color: #02db94 !important;
   border-bottom: rgba(255, 255, 255, .75);
   border-bottom: .25rem solid;
   box-sizing: border-box;
